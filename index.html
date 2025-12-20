@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shayna John | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">SJ</div>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#leadership" class="nav-link">Leadership</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="hero-image-container">
+          <img
+            src="images/shayna-photo.jpg"
+            alt="Shayna John"
+            class="hero-image"
+            onerror="this.style.display='none'; this.parentElement.style.display='none';"
+          />
+        </div>
+        <h1 class="hero-greeting">Hi, I'm</h1>
+        <h1 class="hero-name">Shayna John</h1>
+        <p class="hero-title">Data Scientist & Software Engineer</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-secondary">View My Work</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro">
+              I'm a Data Science major at the University of Nebraska-Lincoln
+              with minors in Business and Computer Science. As a member of the
+              prestigious Jeffrey S. Raikes School, I'm passionate about
+              integrating innovative business concepts with cutting-edge
+              computer science to solve real-world problems.
+            </p>
+            <p>
+              My expertise spans machine learning, data engineering, and
+              full-stack development. I thrive on building intelligent systems
+              that make data-driven insights accessible and actionable. From
+              developing AI assistants to engineering scalable ETL pipelines,
+              I'm driven by the challenge of turning complex data into
+              meaningful solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+          <div class="education-header">
+            <h3>University of Nebraska-Lincoln</h3>
+            <span class="education-date">August 2023 - May 2027</span>
+          </div>
+          <p class="education-degree">
+            Data Science Major | Business & Computer Science Minors
+          </p>
+          <div class="education-highlight">
+            <h4>Jeffrey S. Raikes School of Computer Science & Management</h4>
+            <p>
+              One of 40 students selected annually for an education integrating
+              innovative business concepts with computer science curriculum
+              emphasizing real-world experience & collaboration.
+            </p>
+          </div>
+          <div class="education-details">
+            <div class="detail-group">
+              <h4>Relevant Coursework</h4>
+              <div class="tags">
+                <span class="tag">Computer Science I & II</span>
+                <span class="tag">Data Structures & Algorithms</span>
+                <span class="tag">Software Engineering IV</span>
+                <span class="tag">Statistics & Applications</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Data & Models II & III</span>
+                <span class="tag">Complex Networks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">R</span>
+              <span class="tag">PowerShell</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Libraries</h3>
+            <div class="tags">
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">SciPy</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Frameworks & Tools</h3>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Apache Airflow</span>
+              <span class="tag">SSMS</span>
+              <span class="tag">SSRS</span>
+              <span class="tag">Snowflake</span>
+              <span class="tag">Tableau</span>
+              <span class="tag">Qlik</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Bitbucket</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="timeline-company">Hudl</span>
+                <span class="timeline-date">August 2025 - Present</span>
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Developing an internal AI assistant leveraging NLP &
+                  retrieval-based models to surface context-aware coaching
+                  insights from play data, improving coaching workflow
+                  efficiency by 30%.
+                </li>
+                <li>
+                  Designing a retrieval pipeline using vector embeddings &
+                  OpenAI API enabling rapid retrieval of historical play
+                  patterns.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Economics Research Assistant</h3>
+                <span class="timeline-company"
+                  >Nebraska College of Business</span
+                >
+                <span class="timeline-date">January 2025 - Present</span>
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Automating Python ETL pipelines to ingest & clean 10K+
+                  financial records weekly from government & market sources.
+                </li>
+                <li>
+                  Applying time-series & regression models to analyze economic
+                  indicators influencing state-level policy recommendations.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Data Engineer Intern</h3>
+                <span class="timeline-company">Garmin</span>
+                <span class="timeline-date">May 2025 - August 2025</span>
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Engineered ETL pipelines in Apache Airflow to ingest 50K+
+                  daily server cost records from Azure & AWS into Garmin's
+                  Unified Data Management system, accelerating data availability
+                  for cost analytics.
+                </li>
+                <li>
+                  Refactored & containerized legacy Airflow DAGs with Docker,
+                  cutting runtime failures & improving pipeline scalability
+                  across cloud environments.
+                </li>
+                <li>
+                  Developed an interactive Qlik dashboard tracking pipeline
+                  latency & cloud migration KPIs, adopted by engineering teams &
+                  leadership for operational visibility.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="timeline-company">Nelnet</span>
+                <span class="timeline-date">October 2024 - December 2024</span>
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Developed an AI-powered student analytics tool using Python &
+                  React to surface insights from academic performance data.
+                </li>
+                <li>
+                  Implemented data preprocessing & embedding pipelines that
+                  reduced query latency by 40%.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Business Analytics Intern</h3>
+                <span class="timeline-company">Werner Enterprises</span>
+                <span class="timeline-date">May 2024 - May 2025</span>
+              </div>
+              <ul class="timeline-description">
+                <li>
+                  Built & managed KPI dashboards in Tableau adopted by 50+
+                  stakeholders, enabling leadership to track operational
+                  efficiency & make data-driven business decisions.
+                </li>
+                <li>
+                  Wrote SQL queries on Snowflake for ETL validation & ad hoc
+                  business analysis.
+                </li>
+                <li>
+                  Conducted data analysis to support strategic initiatives,
+                  optimize efficiency, & deliver actionable insights.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Beautify</h3>
+              <span class="project-date">June 2025 - Present</span>
+            </div>
+            <p class="project-description">
+              Built a personalized beauty product recommender leveraging
+              collaborative filtering & NLP sentiment modeling on 15K+ reviews &
+              deployed via Streamlit, to serve 1,000+ real-time recommendations.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Machine Learning</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Moodify</h3>
+              <span class="project-date">March 2025 - Present</span>
+            </div>
+            <p class="project-description">
+              Developed an NLP-driven mood-based music recommender powered by
+              GPT & sentiment analysis of 10K+ song lyrics. Deployed on
+              Streamlit with an interactive UI integrating the Spotify API for
+              on-demand playlist generation.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">GPT</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Spotify API</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Nerts</h3>
+              <span class="project-date">January 2025 - May 2025</span>
+            </div>
+            <p class="project-description">
+              Developed a real-time multiplayer card game using React, Node.js,
+              Socket.io, & Firebase. Designed low-latency game state
+              synchronization supporting 20+ concurrent users under 200ms
+              latency.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section leadership">
+      <div class="container">
+        <h2 class="section-title">Leadership Experience</h2>
+        <div class="leadership-grid">
+          <div class="leadership-card">
+            <h3>TASSEL Cambodia UNL</h3>
+            <p class="leadership-role">Vice President</p>
+            <p class="leadership-date">May 2024 - Present</p>
+            <p class="leadership-description">
+              Review tutor corrections, research funding opportunities, recruit
+              members, & drive the club's expansion.
+            </p>
+          </div>
+
+          <div class="leadership-card">
+            <h3>Girl Up Nebraska Coalition</h3>
+            <p class="leadership-role">Director of Finance</p>
+            <p class="leadership-date">August 2022 - May 2023</p>
+            <p class="leadership-description">
+              Analyzed past years spending, determined current year's total
+              budget for events, summarized financial spending.
+            </p>
+          </div>
+
+          <div class="leadership-card">
+            <h3>Competitive Speech</h3>
+            <p class="leadership-role">Tournament Manager</p>
+            <p class="leadership-date">August 2020 - May 2021</p>
+            <p class="leadership-description">
+              Managed concession operations, coordinated volunteers, & ensured
+              first-aid readiness at tournaments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-subtitle">
+          I'm always open to discussing new opportunities, collaborations, or
+          just having a conversation!
+        </p>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <a href="mailto:shaynacjohn@gmail.com" class="contact-link"
+              >shaynacjohn@gmail.com</a
+            >
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <a href="tel:4025070218" class="contact-link">(402) 507-0218</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💼</div>
+            <a
+              href="https://linkedin.com/in/shayna-john"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-link"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+        <div class="strengths">
+          <p class="strengths-label">Gallup Clifton Strengths:</p>
+          <div class="strengths-tags">
+            <span class="tag">Responsibility</span>
+            <span class="tag">Relator</span>
+            <span class="tag">Restorative</span>
+            <span class="tag">Discipline</span>
+            <span class="tag">Harmony</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Shayna John. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

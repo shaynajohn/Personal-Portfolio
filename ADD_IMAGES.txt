@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════
+  📸 How to Add Your Images
+═══════════════════════════════════════════════════════
+
+1. YOUR PROFILE PHOTO:
+   - Save your photo as: images/shayna-photo.jpg
+   - Or rename it to: shayna-photo.jpg and drag it into the images/ folder
+   - Recommended size: 500x500px or larger (square works best)
+
+2. COMPANY LOGOS:
+   - Add logos to: images/logos/
+   - Name them exactly:
+     * hudl-logo.png
+     * nebraska-logo.png
+     * garmin-logo.png
+     * nelnet-logo.png
+     * werner-logo.png
+
+   Where to find logos:
+   - Company websites (footer or press/media sections)
+   - LinkedIn company pages
+   - Google: "[Company Name] logo PNG transparent"
+   - Brand asset pages
+
+   Tips:
+   - PNG with transparent background works best
+   - White/light colored logos look great on pink background
+   - At least 200px wide for good quality
+
+═══════════════════════════════════════════════════════
+
+Once you add the images, refresh your browser to see them!
+

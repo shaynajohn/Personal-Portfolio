@@ -1,0 +1,29 @@
+═══════════════════════════════════════════════════════
+  🚀 Quick GitHub Pages Deployment
+═══════════════════════════════════════════════════════
+
+STEP 1: Create GitHub Repository
+  1. Go to: https://github.com/new
+  2. Repository name: shayna-john-portfolio
+  3. Make it PUBLIC (required for free hosting)
+  4. DON'T check any boxes (no README, no .gitignore)
+  5. Click "Create repository"
+
+STEP 2: After creating repo, run this command:
+  ./SIMPLE_DEPLOY.sh
+
+  It will ask for:
+  - Your GitHub username
+  - Repository name (shayna-john-portfolio)
+
+STEP 3: Enable GitHub Pages
+  1. Go to your repo on GitHub
+  2. Click "Settings" → "Pages"
+  3. Under "Source": Select "Deploy from a branch"
+  4. Branch: "main", Folder: "/ (root)"
+  5. Click "Save"
+
+Your site will be live at:
+  https://YOUR_USERNAME.github.io/shayna-john-portfolio
+
+═══════════════════════════════════════════════════════

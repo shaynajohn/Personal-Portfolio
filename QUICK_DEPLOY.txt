@@ -1,0 +1,12 @@
+After creating your GitHub repository, run these commands:
+
+1. Copy the repository URL from GitHub (it will look like: https://github.com/YOUR_USERNAME/shayna-john-portfolio.git)
+
+2. Run this command (replace YOUR_USERNAME and REPO_NAME):
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+   git push -u origin main
+
+Or just run: ./PUSH_TO_GITHUB.sh
