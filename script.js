@@ -167,23 +167,6 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-// Handle missing profile image
-const heroImage = document.querySelector(".hero-image");
-if (heroImage) {
-  heroImage.addEventListener("error", function () {
-    this.style.display = "none";
-    const container = this.parentElement;
-    if (container) {
-      container.style.display = "none";
-    }
-  });
-
-  // Check if image loaded successfully
-  if (!heroImage.complete || heroImage.naturalHeight === 0) {
-    heroImage.dispatchEvent(new Event("error"));
-  }
-}
-
 // Console message
 console.log(
   "%c👋 Hello! Thanks for checking out my portfolio!",
