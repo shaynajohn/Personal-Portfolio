@@ -10,11 +10,12 @@
   --ink: #3a3739;
   --text-muted: #756e74;
   --text-soft: #8c848a;
-  --rose-ink: #5c4e56;
+  --rose-ink: #6a5560;
   --rose-accent: #8b737c;
   --rose-accent-hover: #756068;
   --rose-accent-soft: #a8949b;
-  --rose-line: #dfd3d7;
+  --rose-brand: #7a5f6a;
+  --rose-line: #e8d5dc;
   --rose-blush: rgba(245, 236, 240, 0.65);
   --white: #ffffff;
   --cream: #fdfcfd;
@@ -30,46 +31,47 @@
 
   --shadow: rgba(72, 58, 66, 0.06);
   --shadow-hover: rgba(72, 58, 66, 0.1);
-  --shadow-card: 0 4px 28px rgba(72, 58, 66, 0.06);
-  --shadow-card-hover: 0 12px 40px rgba(72, 58, 66, 0.09);
+  /* Soft rose-tinted shadows (subtle pink depth) */
+  --shadow-card: 0 4px 28px rgba(160, 110, 130, 0.07);
+  --shadow-card-hover: 0 14px 42px rgba(150, 100, 120, 0.11);
   --font-sans: "Outfit", system-ui, sans-serif;
 
-  /* Lighter pink ombre — airy wash */
+  /* Subtle pink ombre — visible blush, still airy */
   --aura-bg: radial-gradient(
-      ellipse 105% 80% at 0% 0%,
-      rgba(255, 238, 244, 0.55) 0%,
-      rgba(255, 248, 250, 0.22) 48%,
+      ellipse 108% 82% at 0% 0%,
+      rgba(255, 228, 238, 0.62) 0%,
+      rgba(255, 242, 248, 0.35) 40%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 98% 74% at 100% 4%,
+      rgba(252, 220, 232, 0.52) 0%,
+      rgba(255, 245, 250, 0.28) 48%,
       transparent 68%
     ),
     radial-gradient(
-      ellipse 95% 72% at 100% 6%,
-      rgba(252, 236, 244, 0.48) 0%,
-      rgba(255, 250, 252, 0.2) 52%,
-      transparent 70%
+      ellipse 102% 70% at 50% 100%,
+      rgba(245, 218, 230, 0.48) 0%,
+      rgba(255, 250, 252, 0.22) 46%,
+      transparent 64%
     ),
     radial-gradient(
-      ellipse 100% 68% at 50% 100%,
-      rgba(248, 238, 244, 0.42) 0%,
-      rgba(255, 252, 253, 0.18) 50%,
-      transparent 66%
-    ),
-    radial-gradient(
-      ellipse 65% 50% at 28% 52%,
-      rgba(255, 248, 250, 0.38) 0%,
-      transparent 62%
-    ),
-    radial-gradient(
-      ellipse 58% 48% at 78% 38%,
-      rgba(252, 242, 246, 0.32) 0%,
+      ellipse 68% 52% at 30% 50%,
+      rgba(255, 235, 244, 0.45) 0%,
       transparent 58%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 78% 36%,
+      rgba(252, 228, 238, 0.38) 0%,
+      transparent 56%
     ),
     linear-gradient(
       178deg,
-      #fffcfd 0%,
-      #fcf9fb 22%,
-      #faf7f9 45%,
-      #f6f0f3 68%,
-      #efe8ec 100%
+      #fff9fc 0%,
+      #fdf2f7 18%,
+      #fcf5f9 42%,
+      #f7e8ef 68%,
+      #efdde6 100%
     );
 }
 
@@ -82,7 +84,7 @@ body {
   color: var(--text-dark);
   line-height: 1.65;
   overflow-x: hidden;
-  background-color: #faf8f9;
+  background-color: #fcf3f7;
   background-image: var(--aura-bg);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -90,7 +92,7 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 115, 124, 0.18);
+  background: rgba(232, 170, 195, 0.35);
   color: var(--ink);
 }
 
@@ -105,10 +107,11 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 252, 253, 0.72);
-  -webkit-backdrop-filter: blur(18px) saturate(1.05);
-  backdrop-filter: blur(18px) saturate(1.05);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65), 0 8px 32px rgba(72, 58, 66, 0.04);
+  background: rgba(255, 248, 252, 0.78);
+  -webkit-backdrop-filter: blur(18px) saturate(1.08);
+  backdrop-filter: blur(18px) saturate(1.08);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 10px 36px rgba(180, 120, 140, 0.06);
   z-index: 1000;
   transition: all 0.35s ease;
 }
@@ -126,7 +129,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 1.65rem;
   font-weight: 600;
-  color: var(--rose-ink);
+  color: var(--rose-brand);
   letter-spacing: 0.12em;
 }
 
@@ -218,7 +221,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: clamp(2.75rem, 8vw, 4.25rem);
   font-weight: 600;
-  color: var(--rose-ink);
+  color: var(--rose-brand);
   margin-bottom: 0.85rem;
   letter-spacing: 0.02em;
   line-height: 1.1;
