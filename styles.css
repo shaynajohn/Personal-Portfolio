@@ -17,6 +17,45 @@
   --cream: #fff8f5;
   --shadow: rgba(232, 180, 184, 0.2);
   --shadow-hover: rgba(232, 180, 184, 0.3);
+  --font-sans: "Outfit", system-ui, sans-serif;
+  /* Full-page aura: stronger pinks + clear vertical ombre */
+  --aura-bg: radial-gradient(
+      ellipse 110% 85% at 0% 0%,
+      rgba(255, 195, 210, 0.72) 0%,
+      rgba(255, 225, 235, 0.35) 42%,
+      transparent 62%
+    ),
+    radial-gradient(
+      ellipse 95% 75% at 100% 8%,
+      rgba(250, 175, 200, 0.55) 0%,
+      rgba(255, 215, 228, 0.3) 48%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 100% 70% at 50% 100%,
+      rgba(240, 185, 205, 0.5) 0%,
+      rgba(255, 230, 240, 0.28) 45%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 25% 55%,
+      rgba(255, 210, 225, 0.42) 0%,
+      transparent 58%
+    ),
+    radial-gradient(
+      ellipse 65% 50% at 82% 42%,
+      rgba(255, 200, 218, 0.38) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      168deg,
+      #fff6fa 0%,
+      #ffe8f0 14%,
+      #fff0f5 32%,
+      #fce4ec 52%,
+      #f8d8e4 72%,
+      #f0cfe0 100%
+    );
 }
 
 html {
@@ -24,42 +63,12 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-sans);
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--cream);
-  background-image:
-    radial-gradient(
-      ellipse 85% 55% at 12% 8%,
-      rgba(255, 232, 237, 0.95) 0%,
-      rgba(255, 240, 244, 0.45) 42%,
-      transparent 68%
-    ),
-    radial-gradient(
-      ellipse 75% 50% at 88% 22%,
-      rgba(252, 220, 228, 0.85) 0%,
-      rgba(255, 236, 240, 0.4) 48%,
-      transparent 72%
-    ),
-    radial-gradient(
-      ellipse 70% 45% at 50% 95%,
-      rgba(248, 228, 234, 0.75) 0%,
-      rgba(255, 245, 248, 0.35) 50%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 55% 40% at 45% 55%,
-      rgba(255, 235, 240, 0.5) 0%,
-      transparent 65%
-    ),
-    linear-gradient(
-      165deg,
-      #fff9fb 0%,
-      var(--cream) 28%,
-      #fff5f8 55%,
-      var(--light-pink) 100%
-    );
+  background-color: #fceaf0;
+  background-image: var(--aura-bg);
   background-attachment: fixed;
 }
 
@@ -74,9 +83,10 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px var(--shadow);
+  background: rgba(255, 250, 252, 0.78);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 2px 24px rgba(232, 180, 184, 0.18);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -154,25 +164,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background:
-    radial-gradient(
-      ellipse 90% 60% at 50% 20%,
-      rgba(255, 228, 235, 0.9) 0%,
-      rgba(255, 242, 246, 0.35) 45%,
-      transparent 70%
-    ),
-    radial-gradient(
-      ellipse 70% 50% at 80% 70%,
-      rgba(252, 218, 228, 0.65) 0%,
-      transparent 55%
-    ),
-    linear-gradient(
-      145deg,
-      #fff5f9 0%,
-      var(--light-pink) 38%,
-      var(--cream) 72%,
-      #fdeef2 100%
-    );
+  background: transparent;
   position: relative;
   padding-top: 80px;
 }
@@ -207,12 +199,12 @@ body {
 }
 
 .hero-greeting {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-sans);
   font-size: 2rem;
   font-weight: 400;
   color: var(--text-light);
   margin-bottom: 0.5rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.06em;
 }
 
 .hero-name {
@@ -225,10 +217,12 @@ body {
 }
 
 .hero-title {
+  font-family: var(--font-sans);
   font-size: 1.8rem;
   color: var(--text-light);
   margin-bottom: 2.5rem;
-  font-weight: 400;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .hero-buttons {
@@ -308,10 +302,10 @@ body {
 
 /* Company Logos Section */
 .company-logos {
-  background: var(--white);
+  background: transparent;
   padding: 3rem 0;
-  border-top: 1px solid var(--light-pink);
-  border-bottom: 1px solid var(--light-pink);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .logos-subtitle {
@@ -389,7 +383,7 @@ body {
 
 /* About Section */
 .about {
-  background: var(--white);
+  background: transparent;
 }
 
 .about-content {
@@ -434,14 +428,17 @@ body {
 
 /* Education Section */
 .education {
-  background: var(--light-pink);
+  background: transparent;
 }
 
 .education-card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.78);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-radius: 20px;
   padding: 3rem;
   box-shadow: 0 10px 40px var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -475,7 +472,9 @@ body {
 }
 
 .education-highlight {
-  background: var(--light-pink);
+  background: rgba(255, 236, 242, 0.72);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   padding: 1.5rem;
   border-radius: 15px;
   margin-bottom: 2rem;
@@ -505,7 +504,7 @@ body {
 
 /* Skills Section */
 .skills {
-  background: var(--white);
+  background: transparent;
 }
 
 .skills-grid {
@@ -517,7 +516,10 @@ body {
 }
 
 .skill-category {
-  background: var(--light-pink);
+  background: rgba(255, 248, 252, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   padding: 2rem;
   border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -543,7 +545,7 @@ body {
 }
 
 .tag {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--accent-pink);
   padding: 0.5rem 1.2rem;
   border-radius: 25px;
@@ -562,7 +564,7 @@ body {
 
 /* Experience Section */
 .experience {
-  background: var(--light-pink);
+  background: transparent;
 }
 
 .timeline {
@@ -601,7 +603,10 @@ body {
 }
 
 .timeline-content {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 5px 20px var(--shadow);
@@ -663,7 +668,7 @@ body {
 
 /* Projects Section */
 .projects {
-  background: var(--white);
+  background: transparent;
 }
 
 .projects-grid {
@@ -675,11 +680,13 @@ body {
 }
 
 .project-card {
-  background: var(--light-pink);
+  background: rgba(255, 246, 250, 0.75);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
   padding: 2.5rem;
   border-radius: 20px;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 255, 255, 0.45);
 }
 
 .project-card:hover {
@@ -725,7 +732,7 @@ body {
 
 /* Leadership Section */
 .leadership {
-  background: var(--light-pink);
+  background: transparent;
 }
 
 .leadership-grid {
@@ -737,7 +744,10 @@ body {
 }
 
 .leadership-card {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.78);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 2.5rem;
   border-radius: 20px;
   text-align: center;
@@ -778,7 +788,7 @@ body {
 
 /* Contact Section */
 .contact {
-  background: var(--white);
+  background: transparent;
 }
 
 .contact-subtitle {
@@ -847,10 +857,18 @@ body {
 
 /* Footer */
 .footer {
-  background: var(--deep-pink);
+  background: linear-gradient(
+    135deg,
+    rgba(160, 95, 102, 0.92) 0%,
+    rgba(184, 122, 127, 0.95) 45%,
+    rgba(200, 130, 138, 0.92) 100%
+  );
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   color: var(--white);
   text-align: center;
   padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer p {
@@ -893,7 +911,9 @@ body {
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background: var(--white);
+    background: rgba(255, 250, 252, 0.94);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     width: 100%;
     text-align: center;
     transition: 0.3s;
