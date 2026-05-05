@@ -37,10 +37,12 @@ let lastScroll = 0;
 window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
-  if (currentScroll > 100) {
-    navbar.style.boxShadow = "0 4px 30px rgba(232, 180, 184, 0.3)";
+  if (currentScroll > 80) {
+    navbar.style.boxShadow =
+      "0 1px 0 rgba(255,255,255,0.65), 0 12px 36px rgba(150, 100, 120, 0.09)";
   } else {
-    navbar.style.boxShadow = "0 2px 20px rgba(232, 180, 184, 0.2)";
+    navbar.style.boxShadow =
+      "0 1px 0 rgba(255,255,255,0.65), 0 8px 32px rgba(72, 58, 66, 0.04)";
   }
 
   lastScroll = currentScroll;
@@ -110,12 +112,14 @@ const projectObserver = new IntersectionObserver(
   }
 );
 
-document.querySelectorAll(".project-card, .leadership-card").forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(30px)";
-  card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  projectObserver.observe(card);
-});
+document
+  .querySelectorAll(".project-card, .leadership-card, .skill-category")
+  .forEach((card) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(28px)";
+    card.style.transition = "opacity 0.65s ease, transform 0.65s ease";
+    projectObserver.observe(card);
+  });
 
 // Add active state to navigation links based on scroll position
 const sections = document.querySelectorAll(".section");
@@ -140,13 +144,13 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Parallax effect for hero section
+// Subtle parallax on hero (no fade-out — keeps content readable)
 window.addEventListener("scroll", () => {
   const scrolled = window.pageYOffset;
   const hero = document.querySelector(".hero");
   if (hero && scrolled < window.innerHeight) {
-    hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    hero.style.opacity = 1 - scrolled / window.innerHeight;
+    hero.style.transform = `translateY(${scrolled * 0.22}px)`;
+    hero.style.opacity = "1";
   }
 });
 
