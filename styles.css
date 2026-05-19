@@ -858,6 +858,16 @@ body {
   font-weight: 600;
 }
 
+.project-title-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.project-title-link:hover {
+  color: var(--rose-accent);
+}
+
 .project-date {
   color: var(--rose-accent);
   font-weight: 500;
