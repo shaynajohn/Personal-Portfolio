@@ -294,9 +294,26 @@ body {
   transform: translateY(-2px);
 }
 
+/* Hero CTA — projects */
+.btn-projects {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--rose-ink);
+  border: 2px solid var(--rose-accent);
+  box-shadow: var(--shadow-card);
+  font-weight: 600;
+}
+
+.btn-projects:hover {
+  background: var(--rose-accent);
+  color: var(--white);
+  border-color: var(--rose-accent-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
 .scroll-indicator {
   position: absolute;
-  bottom: 10px;
+  bottom: 4.5rem;
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -942,6 +959,16 @@ body {
 
 .project-title-link:hover {
   color: var(--rose-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-header .project-title-link::after {
+  content: " ↗";
+  font-family: var(--font-sans);
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.65;
 }
 
 .project-date {
@@ -1187,7 +1214,7 @@ body {
   }
 
   .scroll-indicator {
-    bottom: 10px;
+    bottom: 3.25rem;
   }
 
   .logos-grid {

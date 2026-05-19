@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,8 +41,8 @@
         <h1 class="hero-name">Shayna John</h1>
         <p class="hero-title">Applied ML Engineer · RAG & Data Systems</p>
         <div class="hero-buttons">
+          <a href="#projects" class="btn btn-projects">View Projects →</a>
           <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="#projects" class="btn btn-secondary">View My Work</a>
         </div>
       </div>
       <div class="scroll-indicator">
@@ -61,11 +61,6 @@
         </p>
         <div class="about-content">
           <div class="about-text">
-            <p class="about-intro">
-              I'm a Data Science major at UNL (Business & CS minors) in the
-              Raikes School, focused on applied ML that ships: vector search,
-              governed data pipelines, and full-stack tools people actually use.
-            </p>
             <p>
               Recent work spans sports AI at Hudl, cloud cost pipelines at
               Garmin, and Tempo—my running intelligence project on Garmin FIT
@@ -82,9 +77,7 @@
     <section id="education" class="section education">
       <div class="container">
         <h2 class="section-title">Education</h2>
-        <p class="section-lede">
-          Degree program and the Raikes selective honors experience.
-        </p>
+
         <div class="education-card">
           <div class="education-header">
             <h3>University of Nebraska-Lincoln</h3>
@@ -109,9 +102,7 @@
     <section id="skills" class="section skills">
       <div class="container">
         <h2 class="section-title">Skills & Technologies</h2>
-        <p class="section-lede">
-          Stack behind the systems above—languages, modeling, and production tools.
-        </p>
+
         <div class="skills-grid">
           <div class="skill-category">
             <h3>Languages</h3>
@@ -163,122 +154,197 @@
     <section id="experience" class="section experience">
       <div class="container">
         <h2 class="section-title">Work Experience</h2>
-        <p class="section-lede">
-          Hudl and Garmin anchor the story—production RAG and data
-          infrastructure—with modeling and product ML roles around them.
-        </p>
+        
         <div class="timeline">
           <div class="experience-tier experience-tier--featured">
             <p class="tier-label">Featured</p>
-          <div class="timeline-item tier-1">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Applied ML Engineer</h3>
-                <span class="timeline-company">Hudl</span>
-                <span class="timeline-date date-pill">August 2025 – May 2026</span>
+            <div class="timeline-item tier-1">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Applied ML Engineer</h3>
+                  <span class="timeline-company">Hudl</span>
+                  <span class="timeline-date date-pill"
+                    >August 2025 – May 2026</span
+                  >
+                </div>
+                <p class="role-focus">AI systems · RAG & retrieval</p>
+                <ul class="timeline-description">
+                  <li>
+                    Shipped production RAG infrastructure with vector embeddings
+                    & AWS for context-aware basketball insights across
+                    historical play data.
+                  </li>
+                  <li>
+                    Designed retrieval pipelines for sub-second semantic search
+                    over large-scale sports datasets.
+                  </li>
+                  <li>
+                    Partnered with product & engineering to embed AI-assisted
+                    workflows in coaching analysis tools.
+                  </li>
+                  <li>
+                    Led embedding evaluation & ranking experiments to improve
+                    retrieval quality.
+                  </li>
+                  <li>
+                    Shipped AI assistant features that cut coaching workflow
+                    time by 30%.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">AI systems · RAG & retrieval</p>
-              <ul class="timeline-description">
-                <li>Shipped production RAG infrastructure with vector embeddings & AWS for context-aware basketball insights across historical play data.</li>
-                <li>Designed retrieval pipelines for sub-second semantic search over large-scale sports datasets.</li>
-                <li>Partnered with product & engineering to embed AI-assisted workflows in coaching analysis tools.</li>
-                <li>Led embedding evaluation & ranking experiments to improve retrieval quality.</li>
-                <li>Shipped AI assistant features that cut coaching workflow time by 30%.</li>
-              </ul>
             </div>
-          </div>          <div class="timeline-item tier-1">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Data Engineer Intern</h3>
-                <span class="timeline-company">Garmin</span>
-                <span class="timeline-date date-pill">May 2025 – August 2025</span>
+            <div class="timeline-item tier-1">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Data Engineer Intern</h3>
+                  <span class="timeline-company">Garmin</span>
+                  <span class="timeline-date date-pill"
+                    >May 2025 – August 2025</span
+                  >
+                </div>
+                <p class="role-focus">Data infrastructure · pipelines</p>
+                <ul class="timeline-description">
+                  <li>
+                    Owned Apache Airflow ETL ingesting 50K+ daily server cost
+                    records from Azure & AWS into Garmin's Unified Data
+                    Management system.
+                  </li>
+                  <li>
+                    Refactored & containerized legacy Airflow DAGs with Docker
+                    for reliable execution across cloud environments.
+                  </li>
+                  <li>
+                    Delivered a Qlik dashboard on pipeline latency & cloud
+                    migration KPIs adopted by engineering teams & leadership.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Data infrastructure · pipelines</p>
-              <ul class="timeline-description">
-                <li>Owned Apache Airflow ETL ingesting 50K+ daily server cost records from Azure & AWS into Garmin's Unified Data Management system.</li>
-                <li>Refactored & containerized legacy Airflow DAGs with Docker for reliable execution across cloud environments.</li>
-                <li>Delivered a Qlik dashboard on pipeline latency & cloud migration KPIs adopted by engineering teams & leadership.</li>
-              </ul>
             </div>
-          </div>          </div>
+          </div>
           <div class="experience-tier">
             <p class="tier-label">Applied ML & analytics</p>
-          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Data Scientist Intern</h3>
-                <span class="timeline-company">HDR</span>
-                <span class="timeline-date date-pill">January 2026 – May 2026</span>
+            <div class="timeline-item tier-2">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Data Scientist Intern</h3>
+                  <span class="timeline-company">HDR</span>
+                  <span class="timeline-date date-pill"
+                    >January 2026 – May 2026</span
+                  >
+                </div>
+                <p class="role-focus">Prediction & modeling systems</p>
+                <ul class="timeline-description">
+                  <li>
+                    Built end-to-end classification models for project win
+                    probability, lifting forecast accuracy by 40%.
+                  </li>
+                  <li>
+                    Designed feature pipelines across financial, historical, &
+                    operational data to flag pursuit risk.
+                  </li>
+                  <li>
+                    Shipped ML-backed decision-support tools replacing Excel
+                    workflows for 30+ stakeholders.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Prediction & modeling systems</p>
-              <ul class="timeline-description">
-                <li>Built end-to-end classification models for project win probability, lifting forecast accuracy by 40%.</li>
-                <li>Designed feature pipelines across financial, historical, & operational data to flag pursuit risk.</li>
-                <li>Shipped ML-backed decision-support tools replacing Excel workflows for 30+ stakeholders.</li>
-              </ul>
             </div>
-          </div>          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Software Engineer</h3>
-                <span class="timeline-company">Nelnet</span>
-                <span class="timeline-date date-pill">October 2024 – December 2024</span>
+            <div class="timeline-item tier-2">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Software Engineer</h3>
+                  <span class="timeline-company">Nelnet</span>
+                  <span class="timeline-date date-pill"
+                    >October 2024 – December 2024</span
+                  >
+                </div>
+                <p class="role-focus">Product · applied ML applications</p>
+                <ul class="timeline-description">
+                  <li>
+                    Crafted an AI-powered student analytics tool in Python &
+                    React for academic performance patterns.
+                  </li>
+                  <li>
+                    Reduced query latency 40% through preprocessing & embedding
+                    pipeline work.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Product · applied ML applications</p>
-              <ul class="timeline-description">
-                <li>Crafted an AI-powered student analytics tool in Python & React for academic performance patterns.</li>
-                <li>Reduced query latency 40% through preprocessing & embedding pipeline work.</li>
-              </ul>
             </div>
-          </div>          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Incoming Data Scientist Intern</h3>
-                <span class="timeline-company">Genentech</span>
-                <span class="timeline-date date-pill">June 2026 – August 2026</span>
+            <div class="timeline-item tier-2">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Incoming Data Scientist Intern</h3>
+                  <span class="timeline-company">Genentech</span>
+                  <span class="timeline-date date-pill"
+                    >June 2026 – August 2026</span
+                  >
+                </div>
+                <p class="role-focus">Enterprise analytics (incoming)</p>
+                <ul class="timeline-description">
+                  <li>
+                    Incoming role on enterprise analytics & ML initiatives.
+                  </li>
+                  <li>
+                    Will focus on governed data pipelines, experimentation, &
+                    workforce productivity measurement.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Enterprise analytics (incoming)</p>
-              <ul class="timeline-description">
-                <li>Incoming role on enterprise analytics & ML initiatives.</li>
-                <li>Will focus on governed data pipelines, experimentation, & workforce productivity measurement.</li>
-              </ul>
             </div>
-          </div>          </div>
+          </div>
           <div class="experience-tier experience-tier--compact">
             <p class="tier-label">Earlier roles</p>
-          <div class="timeline-item tier-3">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Economics Research Assistant</h3>
-                <span class="timeline-company">Nebraska College of Business</span>
-                <span class="timeline-date date-pill">January 2025 – February 2026</span>
+            <div class="timeline-item tier-3">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Economics Research Assistant</h3>
+                  <span class="timeline-company"
+                    >Nebraska College of Business</span
+                  >
+                  <span class="timeline-date date-pill"
+                    >January 2025 – February 2026</span
+                  >
+                </div>
+                <p class="role-focus">Research · ETL</p>
+                <ul class="timeline-description">
+                  <li>
+                    Automated weekly Python ETL cleaning 10K+ government &
+                    market financial records.
+                  </li>
+                  <li>
+                    Modeled economic indicators with time-series & regression
+                    for state-level policy research.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Research · ETL</p>
-              <ul class="timeline-description">
-                <li>Automated weekly Python ETL cleaning 10K+ government & market financial records.</li>
-                <li>Modeled economic indicators with time-series & regression for state-level policy research.</li>
-              </ul>
             </div>
-          </div>          <div class="timeline-item tier-3">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Business Analytics Intern</h3>
-                <span class="timeline-company">Werner Enterprises</span>
-                <span class="timeline-date date-pill">May 2024 – May 2025</span>
+            <div class="timeline-item tier-3">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Business Analytics Intern</h3>
+                  <span class="timeline-company">Werner Enterprises</span>
+                  <span class="timeline-date date-pill"
+                    >May 2024 – May 2025</span
+                  >
+                </div>
+                <p class="role-focus">Business analytics</p>
+                <ul class="timeline-description">
+                  <li>
+                    Published Tableau KPI dashboards for 50+ stakeholders
+                    tracking operational efficiency & executive decision-making.
+                  </li>
+                </ul>
               </div>
-              <p class="role-focus">Business analytics</p>
-              <ul class="timeline-description">
-                <li>Published Tableau KPI dashboards for 50+ stakeholders tracking operational efficiency & executive decision-making.</li>
-              </ul>
             </div>
-          </div>          </div>
+          </div>
         </div>
       </div>
     </section>
@@ -287,10 +353,7 @@
     <section id="projects" class="section projects">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <p class="section-lede">
-          Tempo is the flagship build; BigByte and Beautify show earlier
-          recommendation-system work.
-        </p>
+        
         <div class="projects-grid">
           <div class="project-card project-card--featured">
             <div class="project-header">
@@ -305,9 +368,7 @@
               </h3>
               <span class="project-date date-pill">May 2026 – Present</span>
             </div>
-            <p class="project-framing">
-              Flagship side project: AI running coach on real wearable telemetry.
-            </p>
+            
             <p class="project-description">
               Building an AI running intelligence system using Garmin FIT data,
               combining time-series analysis, vector search, & LLM-based agents.
@@ -337,10 +398,13 @@
                   >BigByte</a
                 >
               </h3>
-              <span class="project-date date-pill">January 2026 – May 2026</span>
+              <span class="project-date date-pill"
+                >January 2026 – May 2026</span
+              >
             </div>
             <p class="project-framing">
-              Group decision-making when everyone has different food preferences.
+              Group decision-making when everyone has different food
+              preferences.
             </p>
             <p class="project-description">
               Built a group-based restaurant recommendation system that
@@ -365,7 +429,9 @@
                   >Beautify</a
                 >
               </h3>
-              <span class="project-date date-pill">June 2025 – August 2025</span>
+              <span class="project-date date-pill"
+                >June 2025 – August 2025</span
+              >
             </div>
             <p class="project-framing">
               Personalization problem: match users to beauty products at scale.
@@ -380,7 +446,6 @@
             </p>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -388,17 +453,15 @@
     <section id="leadership" class="section leadership">
       <div class="container">
         <h2 class="section-title">Leadership Experience</h2>
-        <p class="section-lede">
-          Operations and leadership outside the classroom—budgets, recruitment, and scale.
-        </p>
+        
         <div class="leadership-grid">
           <div class="leadership-card">
             <h3>TASSEL Cambodia UNL</h3>
             <p class="leadership-role">Vice President</p>
             <p class="leadership-date">May 2024 - Present</p>
             <p class="leadership-description">
-              Scaled recruitment and club operations as VP; managed tutor programs
-              and funding strategy for expansion.
+              Scaled recruitment and club operations as VP; managed tutor
+              programs and funding strategy for expansion.
             </p>
           </div>
 
@@ -407,8 +470,8 @@
             <p class="leadership-role">Director of Finance</p>
             <p class="leadership-date">August 2022 - May 2023</p>
             <p class="leadership-description">
-              Led financial planning—set annual event budgets from historical spend
-              analysis for coalition programming.
+              Led financial planning—set annual event budgets from historical
+              spend analysis for coalition programming.
             </p>
           </div>
 
@@ -417,8 +480,8 @@
             <p class="leadership-role">Tournament Manager</p>
             <p class="leadership-date">August 2020 - May 2021</p>
             <p class="leadership-description">
-              Ran tournament operations across concessions, volunteers, and safety
-              protocols for large competitive events.
+              Ran tournament operations across concessions, volunteers, and
+              safety protocols for large competitive events.
             </p>
           </div>
         </div>
