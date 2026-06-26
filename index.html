@@ -8,515 +8,693 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">SJ</div>
-        <ul class="nav-menu">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#education" class="nav-link">Education</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#leadership" class="nav-link">Leadership</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="aura-layer" aria-hidden="true">
+      <div class="aura-blob aura-blob--1"></div>
+      <div class="aura-blob aura-blob--2"></div>
+      <div class="aura-blob aura-blob--3"></div>
+    </div>
+
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a href="#" class="topbar-logo">Shayna John</a>
+        <nav class="topbar-nav" aria-label="Primary">
+          <a href="#work">work</a>
+          <a href="#projects">projects</a>
+          <a href="#contact">contact</a>
+        </nav>
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Applied ML Engineer · RAG &amp; Data Systems</p>
+        <h1 class="hero-title">
+          Hey, I'm Shayna.<br />
+          I love
+          <span class="hero-glyphs" aria-hidden="true">∘⋆․⊹․∘</span> all things
+          data.
+        </h1>
+
+        <div class="hero-stats" aria-hidden="true">
+          <span>RAG &amp; Retrieval</span>
+          <span>Data Pipelines</span>
+          <span>ML Systems</span>
         </div>
-      </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-greeting">Hi, I'm</h1>
-        <h1 class="hero-name">Shayna John</h1>
-        <p class="hero-title">Applied ML Engineer · RAG & Data Systems</p>
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-projects">View Projects →</a>
-          <a href="#contact" class="btn btn-primary">Get In Touch</a>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-arrow"></div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-lede">
-          I build production AI and data systems—from RAG pipelines and
-          retrieval infrastructure to pipelines that power real products.
-        </p>
-        <div class="about-content">
-          <div class="about-text"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section education">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-
-        <div class="education-card">
-          <div class="education-header">
-            <h3>University of Nebraska-Lincoln</h3>
-            <span class="education-date date-pill">August 2023 – May 2027</span>
+        <div class="retrieval-console" role="search">
+          <label class="sr-only" for="retrieval-input">Search portfolio</label>
+          <div class="console-head">
+            <span class="console-label">semantic retrieval</span>
+            <span class="console-kbd" aria-hidden="true">/</span>
           </div>
-          <p class="education-degree">
-            Data Science Major | Business & Computer Science Minors
+          <div class="console-shell">
+            <div class="console-bar">
+              <span class="console-prompt" aria-hidden="true">query &gt;</span>
+              <input
+                type="search"
+                id="retrieval-input"
+                class="console-input"
+                placeholder="ask about my work — rag, airflow, tempo, embeddings…"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <span class="console-status" aria-live="polite">
+                <span class="status-dot"></span>
+                <span class="status-text">ready</span>
+              </span>
+            </div>
+            <div class="console-scan" aria-hidden="true"></div>
+          </div>
+          <div class="console-chips" aria-label="Suggested searches">
+            <button
+              type="button"
+              class="console-chip"
+              data-query="rag pipelines"
+            >
+              rag pipelines
+            </button>
+            <button type="button" class="console-chip" data-query="airflow etl">
+              airflow etl
+            </button>
+            <button
+              type="button"
+              class="console-chip"
+              data-query="tempo embeddings"
+            >
+              tempo embeddings
+            </button>
+            <button type="button" class="console-chip" data-query="hudl">
+              hudl
+            </button>
+          </div>
+          <ul class="console-results" id="console-results" role="listbox" aria-label="Search results" hidden></ul>
+        </div>
+
+        <a href="#education" class="hero-scroll" aria-label="Scroll to content">
+          <span>explore</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 3v10M4 9l4 4 4-4"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <main class="content">
+      <section
+        id="education"
+        class="block reveal"
+        data-search="education university nebraska lincoln raikes school data science business computer science"
+      >
+        <header class="block-header">
+          <span class="block-num">01</span>
+          <h2>Education</h2>
+        </header>
+        <article class="card">
+          <div class="card-row">
+            <h3>University of Nebraska-Lincoln</h3>
+            <span class="date-pill">August 2023 – May 2027</span>
+          </div>
+          <p class="card-sub">
+            Data Science Major | Business &amp; Computer Science Minors
           </p>
-          <div class="education-highlight">
-            <h4>Jeffrey S. Raikes School of Computer Science & Management</h4>
+          <div class="card-inset">
+            <h4>
+              Jeffrey S. Raikes School of Computer Science &amp; Management
+            </h4>
             <p>
-              One of 40 students selected annually for an education integrating
-              innovative business concepts with computer science curriculum
-              emphasizing real-world experience & collaboration.
+              1 of 40 students selected annually for education integrating
+              computer science, business, &amp; real-world industry experience.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
+        </article>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills">
-      <div class="container">
-        <h2 class="section-title">Skills & Technologies</h2>
-
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Languages</h3>
+      <section
+        id="skills"
+        class="block reveal"
+        data-search="skills python java sql tensorflow pytorch pandas airflow aws react snowflake postgres mongodb tableau qlik scikit-learn"
+      >
+        <header class="block-header">
+          <span class="block-num">02</span>
+          <h2>Skills &amp; Technologies</h2>
+        </header>
+        <div class="skills-bento">
+          <div class="card skill-card">
+            <h3 class="card-label">Languages</h3>
             <div class="tags">
-              <span class="tag">Java</span>
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">R</span>
-              <span class="tag">PowerShell</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
+              <span class="tag">Java</span><span class="tag">Python</span
+              ><span class="tag">SQL</span> <span class="tag">R</span
+              ><span class="tag">PowerShell</span
+              ><span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span><span class="tag">HTML</span
+              ><span class="tag">CSS</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Data / ML</h3>
+          <div class="card skill-card">
+            <h3 class="card-label">Data / ML</h3>
             <div class="tags">
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">SciPy</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Keras</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Matplotlib</span>
-              <span class="tag">Seaborn</span>
+              <span class="tag">Pandas</span><span class="tag">NumPy</span
+              ><span class="tag">SciPy</span>
+              <span class="tag">scikit-learn</span
+              ><span class="tag">TensorFlow</span><span class="tag">Keras</span>
+              <span class="tag">PyTorch</span><span class="tag">Matplotlib</span
+              ><span class="tag">Seaborn</span>
             </div>
           </div>
-          <div class="skill-category">
-            <h3>Frameworks & Tools</h3>
+          <div class="card skill-card skill-card--wide">
+            <h3 class="card-label">Frameworks &amp; Tools</h3>
             <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Apache Airflow</span>
-              <span class="tag">AWS</span>
-              <span class="tag">SSMS</span>
-              <span class="tag">Snowflake</span>
-              <span class="tag">Postgres</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Tableau</span>
-              <span class="tag">Qlik</span>
+              <span class="tag">React</span
+              ><span class="tag">Apache Airflow</span
+              ><span class="tag">AWS</span> <span class="tag">SSMS</span
+              ><span class="tag">Snowflake</span
+              ><span class="tag">Postgres</span> <span class="tag">MongoDB</span
+              ><span class="tag">Tableau</span><span class="tag">Qlik</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section experience">
-      <div class="container">
-        <h2 class="section-title">Work Experience</h2>
+      <section
+        id="work"
+        class="block reveal"
+        data-search="work experience hudl garmin genentech hdr nelnet internship applied ml data engineer data scientist"
+      >
+        <header class="block-header">
+          <span class="block-num">03</span>
+          <h2>Work Experience</h2>
+        </header>
 
-        <div class="timeline">
-          <div class="experience-tier experience-tier--featured">
-            <p class="tier-label">Featured</p>
-            <div class="timeline-item tier-1">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
+        <div class="work-layout">
+          <aside
+            class="work-sidebar work-timeline"
+            role="tablist"
+            aria-label="Roles"
+          >
+            <button
+              type="button"
+              class="work-tab active"
+              role="tab"
+              data-role="genentech"
+              aria-selected="true"
+            >
+              <span class="work-tab-name">Genentech</span>
+              <span class="work-tab-date">2026</span>
+            </button>
+            <button type="button" class="work-tab" role="tab" data-role="hdr">
+              <span class="work-tab-name">HDR</span>
+              <span class="work-tab-date">2026</span>
+            </button>
+            <button type="button" class="work-tab" role="tab" data-role="hudl">
+              <span class="work-tab-name">Hudl</span>
+              <span class="work-tab-date">2025–26</span>
+            </button>
+            <button type="button" class="work-tab" role="tab" data-role="ncb">
+              <span class="work-tab-name">NCB</span>
+              <span class="work-tab-date">2025–26</span>
+            </button>
+            <button
+              type="button"
+              class="work-tab"
+              role="tab"
+              data-role="garmin"
+            >
+              <span class="work-tab-name">Garmin</span>
+              <span class="work-tab-date">2025</span>
+            </button>
+            <button
+              type="button"
+              class="work-tab"
+              role="tab"
+              data-role="werner"
+            >
+              <span class="work-tab-name">Werner</span>
+              <span class="work-tab-date">2024–25</span>
+            </button>
+            <button
+              type="button"
+              class="work-tab"
+              role="tab"
+              data-role="nelnet"
+            >
+              <span class="work-tab-name">Nelnet</span>
+              <span class="work-tab-date">2024</span>
+            </button>
+          </aside>
+
+          <div class="work-detail card">
+            <article
+              class="role-panel active"
+              role="tabpanel"
+              data-role="genentech"
+              data-search="genentech data scientist leadership ai ml program effectiveness web application"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Data Scientist Intern</h3>
+                  <p class="company">Genentech</p>
+                </div>
+                <span class="date-pill">June 2026 – August 2026</span>
+              </div>
+              <p class="role-focus">
+                AI-enabled leadership · program measurement
+              </p>
+              <ul class="bullets">
+                <li>
+                  Developing AI/ML-driven solutions to measure program
+                  effectiveness, impact, &amp; leadership development outcomes.
+                </li>
+                <li>
+                  Building a web application with separate admin &amp;
+                  participant-facing interfaces for an AI-enabled leadership
+                  initiative focused on improving delegation, decision-making,
+                  &amp; organizational adaptability.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="hdr"
+              hidden
+              data-search="hdr data scientist classification models prediction win probability feature pipelines ml"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Data Scientist Intern</h3>
+                  <p class="company">HDR</p>
+                </div>
+                <span class="date-pill">January 2026 – May 2026</span>
+              </div>
+              <p class="role-focus">Prediction &amp; modeling systems</p>
+              <ul class="bullets">
+                <li>
+                  Built end-to-end classification models to predict project win
+                  probability, improving forecast accuracy by 40%.
+                </li>
+                <li>
+                  Engineered feature pipelines integrating financial,
+                  historical, &amp; operational data to surface risk signals.
+                </li>
+                <li>
+                  Deployed ML-backed decision-support tools replacing Excel
+                  workflows used by 30+ stakeholders.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="hudl"
+              hidden
+              data-search="hudl applied ml engineer rag vector embeddings aws basketball retrieval semantic search coaching ai assistant"
+            >
+              <div class="card-row">
+                <div>
                   <h3>Applied ML Engineer</h3>
-                  <span class="timeline-company">Hudl</span>
-                  <span class="timeline-date date-pill"
-                    >August 2025 – May 2026</span
-                  >
+                  <p class="company">Hudl</p>
                 </div>
-                <p class="role-focus">AI systems · RAG & retrieval</p>
-                <ul class="timeline-description">
-                  <li>
-                    Shipped production RAG infrastructure with vector embeddings
-                    & AWS for context-aware basketball insights across
-                    historical play data.
-                  </li>
-                  <li>
-                    Designed retrieval pipelines for sub-second semantic search
-                    over large-scale sports datasets.
-                  </li>
-                  <li>
-                    Partnered with product & engineering to embed AI-assisted
-                    workflows in coaching analysis tools.
-                  </li>
-                  <li>
-                    Led embedding evaluation & ranking experiments to improve
-                    retrieval quality.
-                  </li>
-                  <li>
-                    Shipped AI assistant features that cut coaching workflow
-                    time by 30%.
-                  </li>
-                </ul>
+                <span class="date-pill">August 2025 – May 2026</span>
               </div>
-            </div>
-            <div class="timeline-item tier-1">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
+              <p class="role-focus">AI systems · RAG &amp; retrieval</p>
+              <ul class="bullets">
+                <li>
+                  Built production RAG infrastructure using vector embeddings
+                  &amp; AWS services to deliver context-aware basketball
+                  insights across historical play datasets.
+                </li>
+                <li>
+                  Engineered scalable retrieval pipelines enabling sub-second
+                  semantic search over large-scale sports data.
+                </li>
+                <li>
+                  Collaborated cross-functionally with product &amp; engineering
+                  teams to integrate AI-assisted workflows into coaching
+                  analysis tools.
+                </li>
+                <li>
+                  Optimized retrieval quality through embedding evaluation &amp;
+                  ranking experimentation across historical play datasets.
+                </li>
+                <li>
+                  Shipped AI assistant features that improved coaching workflow
+                  efficiency by 30%.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="ncb"
+              hidden
+              data-search="nebraska college business economics research etl python time series regression"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Economics Research Assistant</h3>
+                  <p class="company">Nebraska College of Business</p>
+                </div>
+                <span class="date-pill">January 2025 – February 2026</span>
+              </div>
+              <p class="role-focus">Research · ETL</p>
+              <ul class="bullets">
+                <li>
+                  Automated Python ETL pipelines to ingest &amp; clean 10K+
+                  financial records weekly from government &amp; market sources.
+                </li>
+                <li>
+                  Applied time-series &amp; regression models to analyze
+                  economic indicators influencing state-level policy
+                  recommendations.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="garmin"
+              hidden
+              data-search="garmin data engineer airflow etl azure aws docker qlik dashboard pipelines cloud"
+            >
+              <div class="card-row">
+                <div>
                   <h3>Data Engineer Intern</h3>
-                  <span class="timeline-company">Garmin</span>
-                  <span class="timeline-date date-pill"
-                    >May 2025 – August 2025</span
-                  >
+                  <p class="company">Garmin</p>
                 </div>
-                <p class="role-focus">Data infrastructure · pipelines</p>
-                <ul class="timeline-description">
-                  <li>
-                    Owned Apache Airflow ETL ingesting 50K+ daily server cost
-                    records from Azure & AWS into Garmin's Unified Data
-                    Management system.
-                  </li>
-                  <li>
-                    Refactored & containerized legacy Airflow DAGs with Docker
-                    for reliable execution across cloud environments.
-                  </li>
-                  <li>
-                    Delivered a Qlik dashboard on pipeline latency & cloud
-                    migration KPIs adopted by engineering teams & leadership.
-                  </li>
-                </ul>
+                <span class="date-pill">May 2025 – August 2025</span>
               </div>
-            </div>
-          </div>
-        <div class="experience-tier">
-          <p class="tier-label">Applied ML & analytics</p>
-          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Incoming Data Scientist Intern</h3>
-                <span class="timeline-company">Genentech</span>
-                <span class="timeline-date date-pill"
-                  >June 2026 – August 2026</span
-                >
-              </div>
-              <p class="role-focus">Enterprise analytics (incoming)</p>
-              <ul class="timeline-description">
-                <li>Incoming role on enterprise analytics & ML initiatives.</li>
+              <p class="role-focus">Data infrastructure · pipelines</p>
+              <ul class="bullets">
                 <li>
-                  Will focus on governed data pipelines, experimentation, &
-                  workforce productivity measurement.
+                  Engineered ETL pipelines in Apache Airflow to ingest 50K+
+                  daily server cost records from Azure &amp; AWS into Garmin's
+                  Unified Data Management system, accelerating data availability
+                  for cost analytics.
+                </li>
+                <li>
+                  Refactored &amp; containerized legacy Airflow DAGs with
+                  Docker, improving pipeline scalability across cloud
+                  environments.
+                </li>
+                <li>
+                  Developed an interactive Qlik dashboard tracking pipeline
+                  latency &amp; cloud migration KPIs, adopted by engineering
+                  teams &amp; leadership for operational visibility.
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Data Scientist Intern</h3>
-                <span class="timeline-company">HDR</span>
-                <span class="timeline-date date-pill"
-                  >January 2026 – May 2026</span
-                >
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="werner"
+              hidden
+              data-search="werner business analytics dashboards kpi operational efficiency"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Business Analytics Intern</h3>
+                  <p class="company">Werner Enterprises</p>
+                </div>
+                <span class="date-pill">May 2024 – May 2025</span>
               </div>
-              <p class="role-focus">Prediction & modeling systems</p>
-              <ul class="timeline-description">
+              <p class="role-focus">Business analytics</p>
+              <ul class="bullets">
                 <li>
-                  Built end-to-end classification models for project win
-                  probability, lifting forecast accuracy by 40%.
-                </li>
-                <li>
-                  Designed feature pipelines across financial, historical, &
-                  operational data to flag pursuit risk.
-                </li>
-                <li>
-                  Shipped ML-backed decision-support tools replacing Excel
-                  workflows for 30+ stakeholders.
+                  Built KPI dashboards adopted by 50+ stakeholders to track
+                  operational efficiency &amp; make data-driven business
+                  decisions.
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="timeline-item tier-2">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3>Software Engineer</h3>
-                <span class="timeline-company">Nelnet</span>
-                <span class="timeline-date date-pill"
-                  >October 2024 – December 2024</span
-                >
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="nelnet"
+              hidden
+              data-search="nelnet software engineer python react student analytics embeddings preprocessing"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p class="company">Nelnet</p>
+                </div>
+                <span class="date-pill">October 2024 – December 2024</span>
               </div>
               <p class="role-focus">Product · applied ML applications</p>
-              <ul class="timeline-description">
+              <ul class="bullets">
                 <li>
-                  Crafted an AI-powered student analytics tool in Python & React
-                  for academic performance patterns.
+                  Developed an AI-powered student analytics tool using Python
+                  &amp; React to surface insights from academic performance
+                  data.
                 </li>
                 <li>
-                  Reduced query latency 40% through preprocessing & embedding
-                  pipeline work.
+                  Implemented data preprocessing &amp; embedding pipelines that
+                  reduced query latency by 40%.
                 </li>
               </ul>
-            </div>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="experience-tier experience-tier--compact">
-          <p class="tier-label">Earlier roles</p>
-            <div class="timeline-item tier-3">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3>Economics Research Assistant</h3>
-                  <span class="timeline-company"
-                    >Nebraska College of Business</span
-                  >
-                  <span class="timeline-date date-pill"
-                    >January 2025 – February 2026</span
-                  >
-                </div>
-                <p class="role-focus">Research · ETL</p>
-                <ul class="timeline-description">
-                  <li>
-                    Automated weekly Python ETL cleaning 10K+ government &
-                    market financial records.
-                  </li>
-                  <li>
-                    Modeled economic indicators with time-series & regression
-                    for state-level policy research.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="timeline-item tier-3">
-              <div class="timeline-marker"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h3>Business Analytics Intern</h3>
-                  <span class="timeline-company">Werner Enterprises</span>
-                  <span class="timeline-date date-pill"
-                    >May 2024 – May 2025</span
-                  >
-                </div>
-                <p class="role-focus">Business analytics</p>
-                <ul class="timeline-description">
-                  <li>
-                    Published Tableau KPI dashboards for 50+ stakeholders
-                    tracking operational efficiency & executive decision-making.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      <section
+        id="projects"
+        class="block reveal"
+        data-search="projects tempo bigbyte beautify github rag recommender embeddings fastapi nextjs"
+      >
+        <header class="block-header">
+          <span class="block-num">04</span>
+          <h2>Projects</h2>
+        </header>
+
+        <div class="project-showcase">
+          <button
+            type="button"
+            class="project-card active"
+            data-project="tempo"
+          >
+            <span class="project-card-tag">RAG · Fitness</span>
+            <h3>Tempo</h3>
+            <p>AI running coach with semantic workout memory</p>
+          </button>
+          <button type="button" class="project-card" data-project="bigbyte">
+            <span class="project-card-tag">Recommender</span>
+            <h3>BigByte</h3>
+            <p>Fairness-aware group dining for SF</p>
+          </button>
+          <button type="button" class="project-card" data-project="beautify">
+            <span class="project-card-tag">Hybrid ML</span>
+            <h3>Beautify</h3>
+            <p>Collaborative + content-based recommendations</p>
+          </button>
         </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-
-        <div class="projects-grid">
-          <div class="project-card project-card--featured">
-            <div class="project-header">
-              <h3>
-                <a
-                  href="https://github.com/shaynajohn/Tempo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-title-link"
-                  >Tempo</a
-                >
-              </h3>
-              <span class="project-date date-pill">May 2026 – Present</span>
-            </div>
-
-            <p class="project-description">
-              Building an AI running intelligence system using Garmin FIT data,
-              combining time-series analysis, vector search, & LLM-based agents.
-            </p>
-            <p class="project-description project-description--tight">
-              Developing a RAG-powered athlete memory system for semantic
-              retrieval of historical workouts and training trends.
-            </p>
-            <p class="project-description project-description--tight">
-              Engineering analytics pipelines for fatigue detection, pacing
-              analysis, & performance forecasting.
-            </p>
-            <p class="project-description project-description--tight">
-              Exploring long-term training adaptation modeling & personalized
-              workout insights using wearable telemetry data.
-            </p>
-          </div>
-
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <a
-                  href="https://github.com/shaynajohn/BigByte"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-title-link"
-                  >BigByte</a
-                >
-              </h3>
-              <span class="project-date date-pill"
-                >January 2026 – May 2026</span
+        <article
+          class="card project-panel active project-detail"
+          data-project="tempo"
+          data-search="tempo running coach garmin rag openai embeddings pgvector fastapi sqlalchemy nextjs fatigue readiness"
+        >
+          <div class="card-row">
+            <h3>
+              <a
+                href="https://github.com/shaynajohn/Tempo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-link"
+                >Tempo</a
               >
-            </div>
-            <p class="project-framing">
-              Group decision-making when everyone has different food
-              preferences.
-            </p>
-            <p class="project-description">
-              Built a group-based restaurant recommendation system that
-              aggregates multi-user preferences using a weighted utility scoring
-              model.
-            </p>
-            <p class="project-description project-description--tight">
-              Designed a fairness-aware ranking algorithm combining average &
-              minimum user satisfaction to balance overall happiness & avoid
-              individual dissatisfaction.
-            </p>
+            </h3>
+            <span class="date-pill">May 2026 – Present</span>
           </div>
+          <ul class="bullets">
+            <li>
+              Building a personal AI running coach on my Garmin activity data,
+              converting raw workouts into fatigue signals, readiness scores,
+              &amp; LLM training insights for daily decisions.
+            </li>
+            <li>
+              Designing a RAG workout memory system (OpenAI embeddings +
+              pgvector) enabling semantic retrieval over historical runs &amp;
+              training patterns.
+            </li>
+            <li>
+              Building a local-first analytics pipeline (FastAPI, SQLAlchemy,
+              Next.js) that detects overreach &amp; recovery imbalance patterns
+              &amp; surfaces coaching insights via dashboard.
+            </li>
+          </ul>
+        </article>
 
-          <div class="project-card">
-            <div class="project-header">
-              <h3>
-                <a
-                  href="https://github.com/shaynajohn/Beautify"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="project-title-link"
-                  >Beautify</a
-                >
-              </h3>
-              <span class="project-date date-pill"
-                >June 2025 – August 2025</span
+        <article
+          class="card project-panel project-detail"
+          data-project="bigbyte"
+          hidden
+          data-search="bigbyte dining recommender restaurant group voting fairness cuisine budget openrouteservice ranking"
+        >
+          <div class="card-row">
+            <h3>
+              <a
+                href="https://github.com/shaynajohn/BigByte"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-link"
+                >BigByte</a
               >
-            </div>
-            <p class="project-framing">
-              Personalization problem: match users to beauty products at scale.
-            </p>
-            <p class="project-description">
+            </h3>
+            <span class="date-pill">January 2026 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>
+              Building a session-based group dining app for SF that returns 3
+              ranked restaurant picks + real-time group voting with no
+              persistent user data storage.
+            </li>
+            <li>
+              Implementing a fairness-aware recommender using cuisine, budget,
+              vibe, &amp; commute (OpenRouteService) with dealbreaker filtering
+              across users.
+            </li>
+            <li>
+              Designing a multi-objective ranking function optimizing group
+              alignment while limiting worst-case dissatisfaction.
+            </li>
+            <li>
+              Developed an evaluation framework for group recommendation
+              quality, achieving 100% cuisine preference satisfaction &amp; 92%
+              commute constraint adherence across 11 synthetic user groups.
+            </li>
+          </ul>
+        </article>
+
+        <article
+          class="card project-panel project-detail"
+          data-project="beautify"
+          hidden
+          data-search="beautify recommendation nmf collaborative filtering tf-idf hybrid sklearn"
+        >
+          <div class="card-row">
+            <h3>
+              <a
+                href="https://github.com/shaynajohn/Beautify"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-link"
+                >Beautify</a
+              >
+            </h3>
+            <span class="date-pill">June 2025 – August 2025</span>
+          </div>
+          <ul class="bullets">
+            <li>
               Built a hybrid recommendation system combining NMF collaborative
-              filtering & TF-IDF content-based similarity.
-            </p>
-            <p class="project-description project-description--tight">
-              Designed a synthetic data generation pipeline & implemented model
-              evaluation.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+              filtering &amp; TF-IDF content-based similarity.
+            </li>
+            <li>
+              Designed a synthetic data generation pipeline &amp; implemented
+              model evaluation.
+            </li>
+          </ul>
+        </article>
+      </section>
 
-    <!-- Leadership Section -->
-    <section id="leadership" class="section leadership">
-      <div class="container">
-        <h2 class="section-title">Leadership Experience</h2>
-
+      <section
+        id="leadership"
+        class="block reveal"
+        data-search="leadership tassel cambodia girl up competitive speech tournament finance vice president"
+      >
+        <header class="block-header">
+          <span class="block-num">05</span>
+          <h2>Leadership</h2>
+        </header>
         <div class="leadership-grid">
-          <div class="leadership-card">
+          <article class="card">
             <h3>TASSEL Cambodia UNL</h3>
-            <p class="leadership-role">Vice President</p>
-            <p class="leadership-date">May 2024 - Present</p>
-            <p class="leadership-description">
+            <p class="meta">Vice President · May 2024 – Present</p>
+            <p>
               Scaled recruitment and club operations as VP; managed tutor
               programs and funding strategy for expansion.
             </p>
-          </div>
-
-          <div class="leadership-card">
+          </article>
+          <article class="card">
             <h3>Girl Up Nebraska Coalition</h3>
-            <p class="leadership-role">Director of Finance</p>
-            <p class="leadership-date">August 2022 - May 2023</p>
-            <p class="leadership-description">
-              Led financial planning—set annual event budgets from historical
+            <p class="meta">Director of Finance · August 2022 – May 2023</p>
+            <p>
+              Led financial planning. Set annual event budgets from historical
               spend analysis for coalition programming.
             </p>
-          </div>
-
-          <div class="leadership-card">
+          </article>
+          <article class="card">
             <h3>Competitive Speech</h3>
-            <p class="leadership-role">Tournament Manager</p>
-            <p class="leadership-date">August 2020 - May 2021</p>
-            <p class="leadership-description">
+            <p class="meta">Tournament Manager · August 2020 – May 2021</p>
+            <p>
               Ran tournament operations across concessions, volunteers, and
               safety protocols for large competitive events.
             </p>
-          </div>
+          </article>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-lede section-lede--contact">
-          Feel free to reach out—I'd love to connect.
-        </p>
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <a href="mailto:shaynacjohn@gmail.com" class="contact-link"
-              >shaynacjohn@gmail.com</a
-            >
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <a href="tel:4025070218" class="contact-link">(402) 507-0218</a>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">💼</div>
+      <section
+        id="contact"
+        class="contact-closer reveal"
+        data-search="contact email linkedin phone connect reach out"
+      >
+        <div class="contact-card">
+          <p class="contact-eyebrow">Get in touch</p>
+          <h2 class="contact-title">Let's connect!</h2>
+          <div class="contact-grid">
+            <a href="mailto:shaynacjohn@gmail.com" class="contact-item">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">shaynacjohn@gmail.com</span>
+            </a>
+            <a href="tel:4025070218" class="contact-item">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">(402) 507-0218</span>
+            </a>
             <a
               href="https://linkedin.com/in/shayna-john"
               target="_blank"
               rel="noopener noreferrer"
-              class="contact-link"
-              >LinkedIn</a
+              class="contact-item"
             >
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">shayna-john</span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <p>&copy; 2026 Shayna John. All rights reserved.</p>
-      </div>
-    </footer>
+        <p class="site-credit">&copy; 2026 Shayna John</p>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
