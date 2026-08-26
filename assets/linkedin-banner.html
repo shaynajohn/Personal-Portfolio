@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LinkedIn Banner — Portfolio Background</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1584px;
+        height: 396px;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .banner {
+        position: relative;
+        width: 1584px;
+        height: 396px;
+        background: #ffffff;
+        overflow: hidden;
+      }
+
+      .aura-layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .aura-blob {
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      /* Big, obvious pink splashes on pure white */
+      .aura-blob--1 {
+        width: 680px;
+        height: 680px;
+        filter: blur(72px);
+        background: radial-gradient(
+          circle,
+          rgba(255, 150, 185, 0.95) 0%,
+          rgba(255, 185, 205, 0.55) 35%,
+          rgba(255, 210, 220, 0.15) 58%,
+          transparent 72%
+        );
+        top: -55%;
+        left: -5%;
+      }
+
+      .aura-blob--2 {
+        width: 620px;
+        height: 620px;
+        filter: blur(68px);
+        background: radial-gradient(
+          circle,
+          rgba(255, 165, 195, 0.9) 0%,
+          rgba(255, 195, 215, 0.5) 38%,
+          rgba(255, 220, 230, 0.12) 60%,
+          transparent 74%
+        );
+        bottom: -50%;
+        right: 0%;
+      }
+
+      .aura-blob--3 {
+        width: 540px;
+        height: 540px;
+        filter: blur(64px);
+        background: radial-gradient(
+          circle,
+          rgba(255, 155, 190, 0.85) 0%,
+          rgba(255, 190, 210, 0.45) 40%,
+          transparent 70%
+        );
+        top: -15%;
+        left: 38%;
+      }
+
+      .aura-blob--4 {
+        width: 380px;
+        height: 380px;
+        filter: blur(56px);
+        background: radial-gradient(
+          circle,
+          rgba(255, 175, 200, 0.75) 0%,
+          rgba(255, 200, 218, 0.3) 45%,
+          transparent 68%
+        );
+        bottom: -20%;
+        left: 22%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner" id="banner">
+      <div class="aura-layer" aria-hidden="true">
+        <div class="aura-blob aura-blob--1"></div>
+        <div class="aura-blob aura-blob--2"></div>
+        <div class="aura-blob aura-blob--3"></div>
+        <div class="aura-blob aura-blob--4"></div>
+      </div>
+    </div>
+  </body>
+</html>

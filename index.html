@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shayna John | Portfolio</title>
+    <meta
+      name="description"
+      content="Software & data generalist building products, pipelines, and AI-powered systems. Portfolio with interactive semantic search."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Shayna John | Portfolio" />
+    <meta
+      property="og:description"
+      content="Software & Data · Products, pipelines, and AI systems. Explore my work via semantic retrieval."
+    />
+    <meta property="og:url" content="https://shaynajohn.github.io/Personal-Portfolio/" />
+    <meta property="og:image" content="https://shaynajohn.github.io/Personal-Portfolio/assets/linkedin-featured.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shayna John | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Software & Data · Products, pipelines, and AI systems"
+    />
+    <meta name="twitter:image" content="https://shaynajohn.github.io/Personal-Portfolio/assets/linkedin-featured.png" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,7 +60,7 @@
     </header>
     <section class="hero">
       <div class="hero-inner">
-        <p class="hero-eyebrow">Applied ML Engineer · RAG &amp; Data Systems</p>
+        <p class="hero-eyebrow">Software &amp; Data · Products &amp; Systems</p>
         <h1 class="hero-title">
           Hey, I'm Shayna.<br />
           I love
@@ -48,9 +69,9 @@
         </h1>
 
         <div class="hero-stats" aria-hidden="true">
-          <span>RAG &amp; Retrieval</span>
-          <span>Data Pipelines</span>
-          <span>ML Systems</span>
+          <span>Software</span>
+          <span>Data Systems</span>
+          <span>AI Products</span>
         </div>
 
         <div class="retrieval-console" role="search">
@@ -66,7 +87,7 @@
                 type="search"
                 id="retrieval-input"
                 class="console-input"
-                placeholder="ask about my work — rag, airflow, tempo, embeddings…"
+                placeholder="ask about my work — product, pipelines, tempo, workshop…"
                 autocomplete="off"
                 spellcheck="false"
               />
@@ -81,9 +102,9 @@
             <button
               type="button"
               class="console-chip"
-              data-query="rag pipelines"
+              data-query="ai agents"
             >
-              rag pipelines
+              ai agents
             </button>
             <button type="button" class="console-chip" data-query="airflow etl">
               airflow etl
@@ -91,12 +112,12 @@
             <button
               type="button"
               class="console-chip"
-              data-query="tempo embeddings"
+              data-query="tempo"
             >
-              tempo embeddings
+              tempo
             </button>
-            <button type="button" class="console-chip" data-query="hudl">
-              hudl
+            <button type="button" class="console-chip" data-query="workshop">
+              workshop
             </button>
           </div>
           <ul class="console-results" id="console-results" role="listbox" aria-label="Search results" hidden></ul>
@@ -202,7 +223,7 @@
       <section
         id="work"
         class="block reveal"
-        data-search="work experience hudl garmin genentech hdr nelnet internship applied ml data engineer data scientist"
+        data-search="work experience workshop genentech hdr hudl garmin nelnet werner product manager software engineer data scientist data engineer internship"
       >
         <header class="block-header">
           <span class="block-num">03</span>
@@ -219,8 +240,17 @@
               type="button"
               class="work-tab active"
               role="tab"
-              data-role="genentech"
+              data-role="workshop"
               aria-selected="true"
+            >
+              <span class="work-tab-name">Workshop</span>
+              <span class="work-tab-date">2026–</span>
+            </button>
+            <button
+              type="button"
+              class="work-tab"
+              role="tab"
+              data-role="genentech"
             >
               <span class="work-tab-name">Genentech</span>
               <span class="work-tab-date">2026</span>
@@ -250,19 +280,19 @@
               type="button"
               class="work-tab"
               role="tab"
-              data-role="werner"
+              data-role="nelnet"
             >
-              <span class="work-tab-name">Werner</span>
-              <span class="work-tab-date">2024–25</span>
+              <span class="work-tab-name">Nelnet</span>
+              <span class="work-tab-date">2024</span>
             </button>
             <button
               type="button"
               class="work-tab"
               role="tab"
-              data-role="nelnet"
+              data-role="werner"
             >
-              <span class="work-tab-name">Nelnet</span>
-              <span class="work-tab-date">2024</span>
+              <span class="work-tab-name">Werner</span>
+              <span class="work-tab-date">2024–25</span>
             </button>
           </aside>
 
@@ -270,8 +300,39 @@
             <article
               class="role-panel active"
               role="tabpanel"
+              data-role="workshop"
+              data-search="workshop product development manager ai agent platform llm vector search crm slack hubspot roadmap event-driven workflows startup"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Product Development Manager</h3>
+                  <p class="company">Workshop</p>
+                </div>
+                <span class="date-pill">August 2026 – Present</span>
+              </div>
+              <p class="role-focus">AI agents · product strategy</p>
+              <ul class="bullets">
+                <li>
+                  Leading technical product strategy &amp; execution for an
+                  internal AI agent platform at a high-growth startup,
+                  translating user workflows into technical requirements &amp;
+                  prioritized engineering work.
+                </li>
+                <li>
+                  Owning the roadmap &amp; technical direction for AI agents
+                  &amp; event-driven workflows integrating LLMs, vector search,
+                  CRM &amp; support data, and tools including Slack &amp;
+                  HubSpot.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
               data-role="genentech"
-              data-search="genentech data scientist leadership ai ml program effectiveness web application"
+              hidden
+              data-search="genentech data scientist leadership ai full-stack web application program effectiveness engagement"
             >
               <div class="card-row">
                 <div>
@@ -280,19 +341,17 @@
                 </div>
                 <span class="date-pill">June 2026 – August 2026</span>
               </div>
-              <p class="role-focus">
-                AI-enabled leadership · program measurement
-              </p>
+              <p class="role-focus">Full-stack · program measurement</p>
               <ul class="bullets">
                 <li>
-                  Developing AI/ML-driven solutions to measure program
-                  effectiveness, impact, &amp; leadership development outcomes.
+                  Built a full-stack web application with separate admin and
+                  participant interfaces supporting an AI-enabled leadership
+                  initiative.
                 </li>
                 <li>
-                  Building a web application with separate admin &amp;
-                  participant-facing interfaces for an AI-enabled leadership
-                  initiative focused on improving delegation, decision-making,
-                  &amp; organizational adaptability.
+                  Developed data-driven functionality to measure program
+                  effectiveness, participant engagement, and leadership
+                  outcomes.
                 </li>
               </ul>
             </article>
@@ -302,7 +361,7 @@
               role="tabpanel"
               data-role="hdr"
               hidden
-              data-search="hdr data scientist classification models prediction win probability feature pipelines ml"
+              data-search="hdr data scientist classification models prediction win probability feature pipelines ml decision-support"
             >
               <div class="card-row">
                 <div>
@@ -322,7 +381,7 @@
                   historical, &amp; operational data to surface risk signals.
                 </li>
                 <li>
-                  Deployed ML-backed decision-support tools replacing Excel
+                  Built ML-backed decision-support tools replacing Excel
                   workflows used by 30+ stakeholders.
                 </li>
               </ul>
@@ -333,21 +392,20 @@
               role="tabpanel"
               data-role="hudl"
               hidden
-              data-search="hudl applied ml engineer rag vector embeddings aws basketball retrieval semantic search coaching ai assistant"
+              data-search="hudl software engineer rag vector embeddings aws basketball retrieval semantic search coaching ai assistant"
             >
               <div class="card-row">
                 <div>
-                  <h3>Applied ML Engineer</h3>
+                  <h3>Software Engineer</h3>
                   <p class="company">Hudl</p>
                 </div>
                 <span class="date-pill">August 2025 – May 2026</span>
               </div>
-              <p class="role-focus">AI systems · RAG &amp; retrieval</p>
+              <p class="role-focus">RAG · retrieval systems</p>
               <ul class="bullets">
                 <li>
                   Built production RAG infrastructure using vector embeddings
-                  &amp; AWS services to deliver context-aware basketball
-                  insights across historical play datasets.
+                  &amp; AWS to deliver basketball insights from historical data.
                 </li>
                 <li>
                   Engineered scalable retrieval pipelines enabling sub-second
@@ -402,7 +460,7 @@
               role="tabpanel"
               data-role="garmin"
               hidden
-              data-search="garmin data engineer airflow etl azure aws docker qlik dashboard pipelines cloud"
+              data-search="garmin data engineer airflow etl azure aws docker dashboard pipelines cloud migration kpi"
             >
               <div class="card-row">
                 <div>
@@ -425,9 +483,33 @@
                   environments.
                 </li>
                 <li>
-                  Developed an interactive Qlik dashboard tracking pipeline
-                  latency &amp; cloud migration KPIs, adopted by engineering
-                  teams &amp; leadership for operational visibility.
+                  Developed an interactive dashboard for cloud migration KPIs,
+                  adopted by engineering teams &amp; leadership for operational
+                  visibility.
+                </li>
+              </ul>
+            </article>
+
+            <article
+              class="role-panel"
+              role="tabpanel"
+              data-role="nelnet"
+              hidden
+              data-search="nelnet software engineer python react student analytics"
+            >
+              <div class="card-row">
+                <div>
+                  <h3>Software Engineer</h3>
+                  <p class="company">Nelnet</p>
+                </div>
+                <span class="date-pill">October 2024 – December 2024</span>
+              </div>
+              <p class="role-focus">Product · analytics tools</p>
+              <ul class="bullets">
+                <li>
+                  Developed an AI-powered student analytics tool using Python
+                  &amp; React to surface insights from academic performance
+                  data.
                 </li>
               </ul>
             </article>
@@ -455,34 +537,6 @@
                 </li>
               </ul>
             </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="nelnet"
-              hidden
-              data-search="nelnet software engineer python react student analytics embeddings preprocessing"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Software Engineer</h3>
-                  <p class="company">Nelnet</p>
-                </div>
-                <span class="date-pill">October 2024 – December 2024</span>
-              </div>
-              <p class="role-focus">Product · applied ML applications</p>
-              <ul class="bullets">
-                <li>
-                  Developed an AI-powered student analytics tool using Python
-                  &amp; React to surface insights from academic performance
-                  data.
-                </li>
-                <li>
-                  Implemented data preprocessing &amp; embedding pipelines that
-                  reduced query latency by 40%.
-                </li>
-              </ul>
-            </article>
           </div>
         </div>
       </section>
@@ -490,7 +544,7 @@
       <section
         id="projects"
         class="block reveal"
-        data-search="projects tempo bigbyte beautify github rag recommender embeddings fastapi nextjs"
+        data-search="projects tempo bigbyte github rag recommender embeddings fastapi nextjs dining"
       >
         <header class="block-header">
           <span class="block-num">04</span>
@@ -503,19 +557,14 @@
             class="project-card active"
             data-project="tempo"
           >
-            <span class="project-card-tag">RAG · Fitness</span>
+            <span class="project-card-tag">AI · Fitness</span>
             <h3>Tempo</h3>
-            <p>AI running coach with semantic workout memory</p>
+            <p>Personal AI running coach with workout memory</p>
           </button>
           <button type="button" class="project-card" data-project="bigbyte">
-            <span class="project-card-tag">Recommender</span>
+            <span class="project-card-tag">Product · Recommender</span>
             <h3>BigByte</h3>
             <p>Fairness-aware group dining for SF</p>
-          </button>
-          <button type="button" class="project-card" data-project="beautify">
-            <span class="project-card-tag">Hybrid ML</span>
-            <h3>Beautify</h3>
-            <p>Collaborative + content-based recommendations</p>
           </button>
         </div>
 
@@ -538,14 +587,13 @@
           </div>
           <ul class="bullets">
             <li>
-              Building a personal AI running coach on my Garmin activity data,
+              Building a personal AI running coach on Garmin activity data,
               converting raw workouts into fatigue signals, readiness scores,
               &amp; LLM training insights for daily decisions.
             </li>
             <li>
-              Designing a RAG workout memory system (OpenAI embeddings +
-              pgvector) enabling semantic retrieval over historical runs &amp;
-              training patterns.
+              Designing a RAG workout memory system with OpenAI embeddings +
+              pgvector for semantic retrieval of historical runs.
             </li>
             <li>
               Building a local-first analytics pipeline (FastAPI, SQLAlchemy,
@@ -559,7 +607,7 @@
           class="card project-panel project-detail"
           data-project="bigbyte"
           hidden
-          data-search="bigbyte dining recommender restaurant group voting fairness cuisine budget openrouteservice ranking"
+          data-search="bigbyte dining recommender restaurant group voting fairness cuisine budget commute ranking onrender"
         >
           <div class="card-row">
             <h3>
@@ -570,58 +618,29 @@
                 class="ext-link"
                 >BigByte</a
               >
+              <a
+                href="https://bigbyte.onrender.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="ext-link project-live"
+                >Live</a
+              >
             </h3>
             <span class="date-pill">January 2026 – Present</span>
           </div>
           <ul class="bullets">
             <li>
               Building a session-based group dining app for SF that returns 3
-              ranked restaurant picks + real-time group voting with no
-              persistent user data storage.
+              ranked restaurant picks + real-time group voting.
             </li>
             <li>
               Implementing a fairness-aware recommender using cuisine, budget,
-              vibe, &amp; commute (OpenRouteService) with dealbreaker filtering
-              across users.
-            </li>
-            <li>
-              Designing a multi-objective ranking function optimizing group
-              alignment while limiting worst-case dissatisfaction.
+              vibe, &amp; commute with dealbreaker filtering.
             </li>
             <li>
               Developed an evaluation framework for group recommendation
               quality, achieving 100% cuisine preference satisfaction &amp; 92%
               commute constraint adherence across 11 synthetic user groups.
-            </li>
-          </ul>
-        </article>
-
-        <article
-          class="card project-panel project-detail"
-          data-project="beautify"
-          hidden
-          data-search="beautify recommendation nmf collaborative filtering tf-idf hybrid sklearn"
-        >
-          <div class="card-row">
-            <h3>
-              <a
-                href="https://github.com/shaynajohn/Beautify"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="ext-link"
-                >Beautify</a
-              >
-            </h3>
-            <span class="date-pill">June 2025 – August 2025</span>
-          </div>
-          <ul class="bullets">
-            <li>
-              Built a hybrid recommendation system combining NMF collaborative
-              filtering &amp; TF-IDF content-based similarity.
-            </li>
-            <li>
-              Designed a synthetic data generation pipeline &amp; implemented
-              model evaluation.
             </li>
           </ul>
         </article>
