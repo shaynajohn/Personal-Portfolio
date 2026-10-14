@@ -34,7 +34,6 @@
     />
   </head>
   <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
     <div class="aura-layer" aria-hidden="true">
       <div class="aura-blob aura-blob--1"></div>
       <div class="aura-blob aura-blob--2"></div>
@@ -58,32 +57,31 @@
         </button>
       </div>
     </header>
+
     <section class="hero">
       <div class="hero-inner">
-        <p class="hero-eyebrow">Software · AI · Data</p>
-        <h1 class="hero-title">
-          Hey, I'm Shayna.<br />
-          I build
-          <span class="hero-glyphs" aria-hidden="true">∘⋆․⊹․∘</span>
-          software and AI systems that solve real-world problems.
-        </h1>
+        <h1 class="hero-title">Hey, I'm Shayna.</h1>
 
-        <div class="hero-stats" aria-hidden="true">
-          <span>Software</span>
-          <span>AI/ML</span>
-          <span>Data Systems</span>
-          <span>Product</span>
+        <div class="hero-intro">
+          <p class="hero-sub">
+            I build software and AI systems that solve real-world problems.
+          </p>
+          <p class="hero-now">
+            <span class="hero-now-label">now</span>
+            Product Development Manager at Workshop, building Workshop
+            Sidekick.
+          </p>
         </div>
 
         <div class="retrieval-console" role="search">
           <label class="sr-only" for="retrieval-input">Search portfolio</label>
           <div class="console-head">
-            <span class="console-label">semantic retrieval</span>
+            <span class="console-label">search this page</span>
             <span class="console-kbd" aria-hidden="true">/</span>
           </div>
           <div class="console-shell">
             <div class="console-bar">
-              <span class="console-prompt" aria-hidden="true">query &gt;</span>
+              <span class="console-prompt" aria-hidden="true">query</span>
               <input
                 type="search"
                 id="retrieval-input"
@@ -92,468 +90,348 @@
                 autocomplete="off"
                 spellcheck="false"
               />
-              <span class="console-status" aria-live="polite">
-                <span class="status-dot"></span>
-                <span class="status-text">ready</span>
-              </span>
             </div>
-            <div class="console-scan" aria-hidden="true"></div>
+            <ul class="console-results" id="console-results" role="listbox" aria-label="Search results" hidden></ul>
           </div>
           <div class="console-chips" aria-label="Suggested searches">
-            <button
-              type="button"
-              class="console-chip"
-              data-query="ai agents"
-            >
-              ai agents
-            </button>
-            <button type="button" class="console-chip" data-query="airflow etl">
-              airflow etl
-            </button>
-            <button
-              type="button"
-              class="console-chip"
-              data-query="tempo"
-            >
-              tempo
-            </button>
-            <button type="button" class="console-chip" data-query="workshop">
-              workshop
-            </button>
+            <button type="button" class="console-chip" data-query="ai agents">ai agents</button>
+            <button type="button" class="console-chip" data-query="airflow etl">airflow etl</button>
+            <button type="button" class="console-chip" data-query="rag">rag</button>
+            <button type="button" class="console-chip" data-query="workshop">workshop</button>
           </div>
-          <ul class="console-results" id="console-results" role="listbox" aria-label="Search results" hidden></ul>
+          <p class="console-note">
+            A small retrieval engine that ranks this page's content right in
+            your browser. Tempo does the full version with embeddings and
+            pgvector.
+          </p>
         </div>
-
-        <a href="#education" class="hero-scroll" aria-label="Scroll to content">
-          <span>explore</span>
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M8 3v10M4 9l4 4 4-4"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </a>
       </div>
     </section>
 
     <main class="content">
-      <section
-        id="education"
-        class="block reveal"
-        data-search="education university nebraska lincoln raikes school data science business computer science"
-      >
-        <header class="block-header">
-          <span class="block-num">01</span>
-          <h2>Education</h2>
-        </header>
-        <article class="card">
-          <div class="card-row">
-            <h3>University of Nebraska-Lincoln</h3>
-            <span class="date-pill">August 2023 – May 2027</span>
-          </div>
-          <p class="card-sub">
-            Data Science Major | Business &amp; Computer Science Minors
-          </p>
-          <div class="card-inset">
-            <h4>
-              Jeffrey S. Raikes School of Computer Science &amp; Management
-            </h4>
-            <p>
-              1 of 40 students selected annually for education integrating
-              computer science, business, &amp; real-world industry experience.
-            </p>
-          </div>
-        </article>
-      </section>
-
-      <section
-        id="skills"
-        class="block reveal"
-        data-search="skills python sql java typescript javascript r powershell llms rag embeddings pytorch tensorflow scikit-learn openai fastapi react docker aws azure pandas numpy postgres mongodb snowflake sqlalchemy airflow"
-      >
-        <header class="block-header">
-          <span class="block-num">02</span>
-          <h2>Skills &amp; Technologies</h2>
-        </header>
-        <div class="skills-bento">
-          <div class="card skill-card">
-            <h3 class="card-label">Languages</h3>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Java</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">R</span>
-              <span class="tag">PowerShell</span>
-            </div>
-          </div>
-          <div class="card skill-card">
-            <h3 class="card-label">AI / ML</h3>
-            <div class="tags">
-              <span class="tag">LLMs</span>
-              <span class="tag">RAG</span>
-              <span class="tag">Vector Embeddings</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">OpenAI API</span>
-              <span class="tag">Prompt Engineering</span>
-            </div>
-          </div>
-          <div class="card skill-card">
-            <h3 class="card-label">Data Systems</h3>
-            <div class="tags">
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Snowflake</span>
-              <span class="tag">SQLAlchemy</span>
-              <span class="tag">Airflow</span>
-            </div>
-          </div>
-          <div class="card skill-card">
-            <h3 class="card-label">Software / Cloud</h3>
-            <div class="tags">
-              <span class="tag">FastAPI</span>
-              <span class="tag">React</span>
-              <span class="tag">Docker</span>
-              <span class="tag">AWS</span>
-              <span class="tag">Azure</span>
-              <span class="tag">REST APIs</span>
-              <span class="tag">Git</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section
         id="work"
         class="block reveal"
         data-search="work experience workshop genentech hdr hudl garmin nelnet werner product manager software engineer data scientist data engineer internship"
       >
         <header class="block-header">
-          <span class="block-num">03</span>
           <h2>Work Experience</h2>
         </header>
 
-        <div class="work-layout">
-          <aside
-            class="work-sidebar work-timeline"
-            role="tablist"
-            aria-label="Roles"
+        <ol class="work-index">
+          <li
+            class="work-row is-open"
+            data-role="workshop"
+            data-search="workshop sidekick product development manager ai agent platform llm vector search crm slack hubspot roadmap sales support customer success software systems"
           >
-            <button
-              type="button"
-              class="work-tab active"
-              role="tab"
-              data-role="workshop"
-              aria-selected="true"
-            >
-              <span class="work-tab-name">Workshop</span>
-              <span class="work-tab-date">2026–</span>
+            <button type="button" class="work-row-head" aria-expanded="true" aria-controls="role-workshop">
+              <img class="work-logo" src="assets/logos/workshop.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Workshop</span>
+                <span class="work-title">Product Development Manager</span>
+              </span>
+              <span class="work-years">2026–Now</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button
-              type="button"
-              class="work-tab"
-              role="tab"
-              data-role="genentech"
-            >
-              <span class="work-tab-name">Genentech</span>
-              <span class="work-tab-date">2026</span>
+            <div class="work-row-body" id="role-workshop">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">August 2026 – Present</span>
+                    <span class="role-focus">AI agents · software systems · technical product strategy</span>
+                  </p>
+                  <div class="work-product">
+                    <h4>Workshop Sidekick</h4>
+                    <p>
+                      Internal AI agent platform for sales, support, and
+                      customer success workflows.
+                    </p>
+                  </div>
+                  <ul class="bullets">
+                    <li>
+                      Leading technical product strategy and execution for an
+                      internal AI agent platform, translating user workflows
+                      into technical requirements and prioritized engineering
+                      work.
+                    </li>
+                    <li>
+                      Owning roadmap and technical direction for AI agents and
+                      LLM-powered workflows integrating vector search,
+                      CRM/support data, Slack, and HubSpot.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="genentech"
+            data-search="genentech data scientist leadership ai full-stack web application program effectiveness engagement"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-genentech">
+              <img class="work-logo" src="assets/logos/genentech.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Genentech</span>
+                <span class="work-title">Data Scientist Intern</span>
+              </span>
+              <span class="work-years">2026</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button type="button" class="work-tab" role="tab" data-role="hdr">
-              <span class="work-tab-name">HDR</span>
-              <span class="work-tab-date">2026</span>
+            <div class="work-row-body" id="role-genentech">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">June 2026 – August 2026</span>
+                    <span class="role-focus">Software · AI · program systems</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Built a full-stack web application with separate admin
+                      and participant interfaces supporting an AI-enabled
+                      leadership initiative.
+                    </li>
+                    <li>
+                      Developed data-driven functionality to measure program
+                      effectiveness, participant engagement, and leadership
+                      outcomes.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="hdr"
+            data-search="hdr data scientist classification models prediction win probability feature pipelines ml decision-support"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-hdr">
+              <img class="work-logo" src="assets/logos/hdr.svg" alt="" />
+              <span class="work-name">
+                <span class="work-company">HDR</span>
+                <span class="work-title">Data Scientist Intern</span>
+              </span>
+              <span class="work-years">2026</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button type="button" class="work-tab" role="tab" data-role="hudl">
-              <span class="work-tab-name">Hudl</span>
-              <span class="work-tab-date">2025–26</span>
+            <div class="work-row-body" id="role-hdr">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">January 2026 – May 2026</span>
+                    <span class="role-focus">Prediction &amp; modeling systems</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Built end-to-end classification models to predict project
+                      win probability, improving forecast accuracy by 40%.
+                    </li>
+                    <li>
+                      Engineered feature pipelines integrating financial,
+                      historical, and operational data to identify risk signals
+                      and drivers of project outcomes.
+                    </li>
+                    <li>
+                      Deployed ML-backed decision-support tools replacing Excel
+                      workflows used by 30+ stakeholders.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="hudl"
+            data-search="hudl applied ml engineer python aws vector databases rag retrieval apis basketball coaching ai assistant"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-hudl">
+              <img class="work-logo" src="assets/logos/hudl.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Hudl</span>
+                <span class="work-title">Applied ML Engineer</span>
+              </span>
+              <span class="work-years">2025–26</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button type="button" class="work-tab" role="tab" data-role="ncb">
-              <span class="work-tab-name">NCB</span>
-              <span class="work-tab-date">2025–26</span>
+            <div class="work-row-body" id="role-hudl">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">August 2025 – May 2026</span>
+                    <span class="role-focus">AI/ML engineering · retrieval systems</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Built production AI services using Python, AWS, and
+                      vector databases to deliver context-aware insights across
+                      large-scale basketball play data.
+                    </li>
+                    <li>
+                      Engineered RAG/retrieval pipelines and APIs enabling
+                      sub-second semantic search over historical play data.
+                    </li>
+                    <li>
+                      Integrated AI assistant workflows into production
+                      coaching tools, collaborating with product and
+                      engineering teams to improve coaching efficiency by 30%.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="ncb"
+            data-search="nebraska college business economics research etl python time series regression"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-ncb">
+              <img class="work-logo" src="assets/logos/ncb.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Nebraska College of Business</span>
+                <span class="work-title">Economics Research Assistant</span>
+              </span>
+              <span class="work-years">2025–26</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button
-              type="button"
-              class="work-tab"
-              role="tab"
-              data-role="garmin"
-            >
-              <span class="work-tab-name">Garmin</span>
-              <span class="work-tab-date">2025</span>
+            <div class="work-row-body" id="role-ncb">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">January 2025 – February 2026</span>
+                    <span class="role-focus">Research · ETL</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Automated Python ETL pipelines to ingest &amp; clean 10K+
+                      financial records weekly from government &amp; market
+                      sources.
+                    </li>
+                    <li>
+                      Applied time-series &amp; regression models to analyze
+                      economic indicators influencing state-level policy
+                      recommendations.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="garmin"
+            data-search="garmin data engineer airflow etl azure aws docker dashboard pipelines cloud migration kpi"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-garmin">
+              <img class="work-logo" src="assets/logos/garmin.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Garmin</span>
+                <span class="work-title">Data Engineer Intern</span>
+              </span>
+              <span class="work-years">2025</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button
-              type="button"
-              class="work-tab"
-              role="tab"
-              data-role="nelnet"
-            >
-              <span class="work-tab-name">Nelnet</span>
-              <span class="work-tab-date">2024</span>
+            <div class="work-row-body" id="role-garmin">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">May 2025 – August 2025</span>
+                    <span class="role-focus">Data infrastructure · pipelines</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Engineered Airflow ETL pipelines ingesting 50K+ daily
+                      server cost records from Azure and AWS into Garmin's
+                      Unified Data Management system.
+                    </li>
+                    <li>
+                      Refactored and containerized legacy Airflow DAGs with
+                      Docker, improving pipeline scalability and reliability
+                      across cloud environments.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="nelnet"
+            data-search="nelnet software engineer python react student analytics embeddings preprocessing latency"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-nelnet">
+              <img class="work-logo" src="assets/logos/nelnet.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Nelnet</span>
+                <span class="work-title">Software Engineer</span>
+              </span>
+              <span class="work-years">2024</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-            <button
-              type="button"
-              class="work-tab"
-              role="tab"
-              data-role="werner"
-            >
-              <span class="work-tab-name">Werner</span>
-              <span class="work-tab-date">2024–25</span>
+            <div class="work-row-body" id="role-nelnet">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">October 2024 – December 2024</span>
+                    <span class="role-focus">Software engineering · AI products</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Developed an AI-powered student analytics tool using
+                      Python and React to surface insights from academic
+                      performance data.
+                    </li>
+                    <li>
+                      Implemented data preprocessing and embedding pipelines,
+                      reducing query latency by 40%.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="work-row"
+            data-role="werner"
+            data-search="werner business analytics dashboards kpi operational efficiency"
+          >
+            <button type="button" class="work-row-head" aria-expanded="false" aria-controls="role-werner">
+              <img class="work-logo" src="assets/logos/werner.png" alt="" />
+              <span class="work-name">
+                <span class="work-company">Werner Enterprises</span>
+                <span class="work-title">Business Analytics Intern</span>
+              </span>
+              <span class="work-years">2024–25</span>
+              <span class="work-toggle" aria-hidden="true"></span>
             </button>
-          </aside>
-
-          <div class="work-detail card">
-            <article
-              class="role-panel active"
-              role="tabpanel"
-              data-role="workshop"
-              data-search="workshop sidekick product development manager ai agent platform llm vector search crm slack hubspot roadmap sales support customer success software systems"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Product Development Manager</h3>
-                  <p class="company">Workshop</p>
+            <div class="work-row-body" id="role-werner">
+              <div class="work-row-inner">
+                <div class="work-row-content">
+                  <p class="work-meta">
+                    <span class="work-dates">May 2024 – May 2025</span>
+                    <span class="role-focus">Business analytics</span>
+                  </p>
+                  <ul class="bullets">
+                    <li>
+                      Built KPI dashboards adopted by 50+ stakeholders to track
+                      operational efficiency &amp; make data-driven business
+                      decisions.
+                    </li>
+                  </ul>
                 </div>
-                <span class="date-pill">August 2026 – Present</span>
               </div>
-              <p class="role-focus">
-                AI agents · software systems · technical product strategy
-              </p>
-              <div class="card-inset work-product">
-                <h4>Workshop Sidekick</h4>
-                <p>
-                  Internal AI agent platform for sales, support, and customer
-                  success workflows.
-                </p>
-              </div>
-              <ul class="bullets">
-                <li>
-                  Leading technical product strategy and execution for an
-                  internal AI agent platform, translating user workflows into
-                  technical requirements and prioritized engineering work.
-                </li>
-                <li>
-                  Owning roadmap and technical direction for AI agents and
-                  LLM-powered workflows integrating vector search, CRM/support
-                  data, Slack, and HubSpot.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="genentech"
-              hidden
-              data-search="genentech data scientist leadership ai full-stack web application program effectiveness engagement"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Data Scientist Intern</h3>
-                  <p class="company">Genentech</p>
-                </div>
-                <span class="date-pill">June 2026 – August 2026</span>
-              </div>
-              <p class="role-focus">Software · AI · program systems</p>
-              <ul class="bullets">
-                <li>
-                  Built a full-stack web application with separate admin and
-                  participant interfaces supporting an AI-enabled leadership
-                  initiative.
-                </li>
-                <li>
-                  Developed data-driven functionality to measure program
-                  effectiveness, participant engagement, and leadership
-                  outcomes.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="hdr"
-              hidden
-              data-search="hdr data scientist classification models prediction win probability feature pipelines ml decision-support"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Data Scientist Intern</h3>
-                  <p class="company">HDR</p>
-                </div>
-                <span class="date-pill">January 2026 – May 2026</span>
-              </div>
-              <p class="role-focus">Prediction &amp; modeling systems</p>
-              <ul class="bullets">
-                <li>
-                  Built end-to-end classification models to predict project win
-                  probability, improving forecast accuracy by 40%.
-                </li>
-                <li>
-                  Engineered feature pipelines integrating financial,
-                  historical, and operational data to identify risk signals and
-                  drivers of project outcomes.
-                </li>
-                <li>
-                  Deployed ML-backed decision-support tools replacing Excel
-                  workflows used by 30+ stakeholders.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="hudl"
-              hidden
-              data-search="hudl applied ml engineer python aws vector databases rag retrieval apis basketball coaching ai assistant"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Applied ML Engineer</h3>
-                  <p class="company">Hudl</p>
-                </div>
-                <span class="date-pill">August 2025 – May 2026</span>
-              </div>
-              <p class="role-focus">AI/ML engineering · retrieval systems</p>
-              <ul class="bullets">
-                <li>
-                  Built production AI services using Python, AWS, and vector
-                  databases to deliver context-aware insights across large-scale
-                  basketball play data.
-                </li>
-                <li>
-                  Engineered RAG/retrieval pipelines and APIs enabling
-                  sub-second semantic search over historical play data.
-                </li>
-                <li>
-                  Integrated AI assistant workflows into production coaching
-                  tools, collaborating with product and engineering teams to
-                  improve coaching efficiency by 30%.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="ncb"
-              hidden
-              data-search="nebraska college business economics research etl python time series regression"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Economics Research Assistant</h3>
-                  <p class="company">Nebraska College of Business</p>
-                </div>
-                <span class="date-pill">January 2025 – February 2026</span>
-              </div>
-              <p class="role-focus">Research · ETL</p>
-              <ul class="bullets">
-                <li>
-                  Automated Python ETL pipelines to ingest &amp; clean 10K+
-                  financial records weekly from government &amp; market sources.
-                </li>
-                <li>
-                  Applied time-series &amp; regression models to analyze
-                  economic indicators influencing state-level policy
-                  recommendations.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="garmin"
-              hidden
-              data-search="garmin data engineer airflow etl azure aws docker dashboard pipelines cloud migration kpi"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Data Engineer Intern</h3>
-                  <p class="company">Garmin</p>
-                </div>
-                <span class="date-pill">May 2025 – August 2025</span>
-              </div>
-              <p class="role-focus">Data infrastructure · pipelines</p>
-              <ul class="bullets">
-                <li>
-                  Engineered Airflow ETL pipelines ingesting 50K+ daily server
-                  cost records from Azure and AWS into Garmin's Unified Data
-                  Management system.
-                </li>
-                <li>
-                  Refactored and containerized legacy Airflow DAGs with Docker,
-                  improving pipeline scalability and reliability across cloud
-                  environments.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="nelnet"
-              hidden
-              data-search="nelnet software engineer python react student analytics embeddings preprocessing latency"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Software Engineer</h3>
-                  <p class="company">Nelnet</p>
-                </div>
-                <span class="date-pill">October 2024 – December 2024</span>
-              </div>
-              <p class="role-focus">Software engineering · AI products</p>
-              <ul class="bullets">
-                <li>
-                  Developed an AI-powered student analytics tool using Python
-                  and React to surface insights from academic performance data.
-                </li>
-                <li>
-                  Implemented data preprocessing and embedding pipelines,
-                  reducing query latency by 40%.
-                </li>
-              </ul>
-            </article>
-
-            <article
-              class="role-panel"
-              role="tabpanel"
-              data-role="werner"
-              hidden
-              data-search="werner business analytics dashboards kpi operational efficiency"
-            >
-              <div class="card-row">
-                <div>
-                  <h3>Business Analytics Intern</h3>
-                  <p class="company">Werner Enterprises</p>
-                </div>
-                <span class="date-pill">May 2024 – May 2025</span>
-              </div>
-              <p class="role-focus">Business analytics</p>
-              <ul class="bullets">
-                <li>
-                  Built KPI dashboards adopted by 50+ stakeholders to track
-                  operational efficiency &amp; make data-driven business
-                  decisions.
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
+            </div>
+          </li>
+        </ol>
       </section>
 
       <section
@@ -562,7 +440,6 @@
         data-search="projects tempo bigbyte github rag recommender embeddings fastapi nextjs dining software product"
       >
         <header class="block-header">
-          <span class="block-num">04</span>
           <h2>Projects</h2>
         </header>
 
@@ -665,7 +542,6 @@
         data-search="leadership tassel cambodia girl up competitive speech tournament finance vice president"
       >
         <header class="block-header">
-          <span class="block-num">05</span>
           <h2>Leadership</h2>
         </header>
         <div class="leadership-grid">
@@ -701,28 +577,41 @@
         class="contact-closer reveal"
         data-search="contact email linkedin phone connect reach out"
       >
-        <div class="contact-card">
-          <p class="contact-eyebrow">Get in touch</p>
-          <h2 class="contact-title">Let's connect!</h2>
-          <div class="contact-grid">
-            <a href="mailto:shaynacjohn@gmail.com" class="contact-item">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">shaynacjohn@gmail.com</span>
-            </a>
-            <a href="tel:4025070218" class="contact-item">
-              <span class="contact-label">Phone</span>
-              <span class="contact-value">(402) 507-0218</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shayna-john-a30423290/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item"
-            >
-              <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">shayna-john</span>
-            </a>
-          </div>
+        <h2 class="contact-title">Let's connect!</h2>
+        <div class="contact-grid">
+          <a href="mailto:shaynacjohn@gmail.com" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                <path d="m4 7 8 6 8-6" />
+              </svg>
+            </span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">shaynacjohn@gmail.com</span>
+          </a>
+          <a href="tel:4025070218" class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 4h3.5l1.75 4.5-2.25 1.5a11 11 0 0 0 6 6l1.5-2.25L20 15.5V19a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4Z" />
+              </svg>
+            </span>
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">(402) 507-0218</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/shayna-john-a30423290/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-item"
+          >
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" />
+              </svg>
+            </span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">shayna-john</span>
+          </a>
         </div>
         <p class="site-credit">&copy; 2026 Shayna John</p>
       </section>
